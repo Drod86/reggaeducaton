@@ -1,8 +1,8 @@
-# My Portfolio<a name="readme-top"></a>
+# Regga-educa-ton Concert Tour<a name="readme-top"></a>
 
 <div align="center">
 
-  <h3><b>Daniel Rodriguez </b></h3>
+  <h3><b>Daniel Rodriguez</b></h3>
 
 </div>
 
@@ -30,7 +30,7 @@
 
 # 📖 [project-name] <a name="about-project"></a>
 
-This template is set up to use ES6 modules and scss in css modules format  to use a component focused approach to build a static web app for github pages. Microverse student linter configurations are in place.
+This is a website for a Reggaeton concert tour. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,9 +51,8 @@ This template is set up to use ES6 modules and scss in css modules format  to us
 
 ### Key Features <a name="key-features"></a>
 
-- **Key Feature1**
-- **Key Feature2**
-- **Key Feature3**
+- **Feature Performers**
+- **About Beneficiaries**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,7 +82,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Drod86/[repo-name].git
+  git clone https://github.com/Drod86/reggaeducaton.git
 ```
 
 ### Install
@@ -116,17 +115,19 @@ To run the project, execute the following command:
 - LinkedIn: [Daniel Rodriguez](https://www.linkedin.com/in/daniel-rodriguez-drod86/)
 
 
-## 👥 Collaborator(s) <a name="authors"></a>
+## 👥 Acknowledgement(s) <a name="authors"></a>
 
-👤 **Collaborator's Name**
+👤 **Cindy Shin - UI design** 
 
-- GitHub: [@Username](https://github.com/Username)
+- Behance: [Cindy Shin](https://www.behance.net/adagio07/projects)
+- Dribble: [Cindy Shin](https://dribbble.com/adagio07/collections)
+- LinkedIn: [Kiju Shin](https://www.linkedin.com/in/adagio07/?locale=en_US)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ] **Future Feature1**
-- [ ] **Future Feature2**
+- [ ] **Ticket Purchase**
+- [ ] **Event Calendar**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,7 +136,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Drod86/reggaeducaton/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

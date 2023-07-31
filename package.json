@@ -1,5 +1,5 @@
 {
-  "name": "es6projecttemplate",
+  "name": "reggaeducaton",
   "version": "1.0.0",
   "description": "",
   "source": "src/index.html",
@@ -16,17 +16,18 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Drod86/Hello_Microverse.git"
+    "url": "https://github.com/Drod86/reggaeducaton"
   },
   "author": "Daniel Rodriguez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Drod86/Hello_Microverse/issues"
+    "url": "https://github.com/Drod86/reggaeducaton/issues"
   },
   "dependencies": {
     "lighthouse": "^10.2.0"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
