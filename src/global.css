@@ -1,0 +1,19 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  box-sizing: border-box;
+}

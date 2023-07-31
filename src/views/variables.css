@@ -1,0 +1,12 @@
+:root {
+  --primary-color: hsl(22, 100%, 48%);
+  --bg-black: #1c1a19;
+  --dark-font-color: #172b4d;
+  --footer-icon-color: #505f79;
+  --form-blurb-color: #262626;
+  --header-color: #3c3a39;
+  --form-text-color: #979493;
+  --hero-icon-color: #dbd8d7;
+  --area-bg-color: #fbf8f7;
+  --white-font: #fff;
+}

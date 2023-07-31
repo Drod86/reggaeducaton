@@ -1,0 +1,9 @@
+@mixin red {
+  color: red;
+}
+
+.header {
+  @include red;
+
+  font-style: italic;
+}

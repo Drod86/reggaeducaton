@@ -1,0 +1,41 @@
+{
+  "name": "es6projecttemplate",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "browserslist": ">0.3%, defaults, supports es6-module, maintained node versions",
+  "targets": {
+    "default": {
+      "distDir": "./docs"
+    }
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "rm -rf docs/ dist/ && parcel build --public-url=''"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drod86/Hello_Microverse.git"
+  },
+  "author": "Daniel Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Drod86/Hello_Microverse/issues"
+  },
+  "dependencies": {
+    "lighthouse": "^10.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.28.0",
+    "hint": "^7.1.10",
+    "parcel": "^2.9.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
