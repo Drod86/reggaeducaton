@@ -17,3 +17,27 @@ body {
   font-weight: 400;
   box-sizing: border-box;
 }
+
+:root {
+  --primary-color: #ec5242;
+  --black: #272a31;
+  --grey: #d3d3d3;
+  --white: #fff;
+}
+
+.checkers {
+  fill: var(--grey);
+  margin: 0;
+  
+}
+
+.box {
+  width: fit-content;
+  padding: 0;
+  border: 1px solid blue;
+  clip-path: inset(1px 143.5px 72.5px 75px);
+}
+
+.twitter {
+  fill: blue;
+}
