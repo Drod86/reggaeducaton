@@ -1,6 +1,6 @@
-import logo from "../components/logo";
-import {navbar, addNavItem} from "../components/navbar";
-import button from "../components/button";
+import logo from '../components/logo.js';
+import { navbar, addNavItem } from '../components/navbar.js';
+import button from '../components/button.js';
 
 const top = [];
 addNavItem(top, 'insta', '', '#instagram');
@@ -16,8 +16,7 @@ addNavItem(main, 'join', 'Join', '#join');
 addNavItem(main, 'sponsor', 'Sponsor', '#sponsor');
 addNavItem(main, 'news', 'News', '#news');
 
-const header = () => {
-  return `
+const header = () => `
     <header class="header">
       <div class="topNav">${navbar('top', top)}</div>
       <div class="mainNav">
@@ -27,7 +26,6 @@ const header = () => {
       </div>
       <div class="mobileNav"></div>
     </header>
-  `
-}
+  `;
 
 export default header;

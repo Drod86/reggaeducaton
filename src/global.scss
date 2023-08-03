@@ -1,0 +1,45 @@
+// Import styles
+@import './views/variables.scss';
+@import './views/mixins.scss';
+@import './views/keyframes.scss';
+@import './views/sections/header.scss';
+@import './views/components/heading.scss';
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+.holdSVG {
+  display: none;
+}
+
+svg {
+  width: 2.4rem;
+}

@@ -1,7 +1,5 @@
-const home = () => {
-  return `
+const home = () => `
       home page
-  `
-}
+  `;
 
 export default home;
