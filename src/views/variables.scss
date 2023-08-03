@@ -1,7 +1,9 @@
 // Colors
 $primary-color: #ec5242;
 $black: #272a31;
+$coal: lighten($black, 30%);
 $grey: #d3d3d3;
+$ash: darken($grey, 55%);
 $white: #fff;
 
 // Fonts

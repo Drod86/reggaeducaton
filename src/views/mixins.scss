@@ -1,0 +1,40 @@
+@mixin grid {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(
+      2.4rem,
+      5vw
+    )
+    [full-end];
+    width: 100vw;
+    
+  @media screen and (min-width: 768px) {
+    grid-template-columns:
+    [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(
+      2.4rem,
+      10vw
+      )
+      [full-end];
+  }
+}
+      
+@mixin grid-item {
+  grid-column: center-start / center-end;
+}
+
+@mixin nested-grid {
+  grid-column: full-start / full-end;
+  @include grid;
+}
+
+@mixin hide {
+  display: none;
+}
+
+@mixin invisible {
+  visibility: hidden;
+}
+
+@mixin show {
+  display: inline-block;
+}
