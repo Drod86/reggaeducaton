@@ -1,14 +1,11 @@
-import { render } from '../utils/utils.js';
+import { grab } from '../utils/utils.js';
 
-const routes = {};
-
-const addRoute = (path, page) => { routes[path] = page; };
-
-const router = (container) => {
+const router = () => {
   window.addEventListener('popstate', () => {
+    let page = grab('#page')
     const pageName = window.location.hash.substring(1);
-    render(container, routes[pageName]);
+    if (pageName === 'home' || pageName === 'about') page.className = pageName;
   });
 };
 
-export { router, addRoute, routes };
+export default router;

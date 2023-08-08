@@ -1,9 +1,10 @@
 // Import styles
-@import './views/variables.scss';
-@import './views/mixins.scss';
-@import './views/keyframes.scss';
-@import './views/sections/header.scss';
-@import './views/components/heading.scss';
+@import './views/variables';
+@import './views/mixins';
+@import './views/keyframes';
+@import './views/sections/header';
+@import './views/components/heading';
+@import './views/pages/pages';
 
 /* Global Styles */
 *,
@@ -42,4 +43,8 @@ li {
 
 svg {
   width: 2.4rem;
+}
+
+.container {
+  width: 100vw;
 }

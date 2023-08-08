@@ -2,13 +2,12 @@
 @import '../variables.scss';
 
 @mixin topNav {
-  @include nested-grid;
-
+  grid-column: full-start / full-end;
+  display: grid;
   color: $grey;
   background-color: $ash;
 
   .top {
-    @include grid-item;
 
     display: flex;
     justify-content: flex-end;
@@ -42,9 +41,7 @@
 
 @mixin mainNav {
   @include grid-item;
-
-  display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   padding: 1.2rem 0;
 
   .logoBox {
@@ -69,7 +66,7 @@
 
     svg {
       width: 5rem;
-      fill: $black;
+      fill: $ash;
       filter: drop-shadow(2px -1.5px 0 $primary-color);
     }
   }
@@ -77,12 +74,22 @@
   .main {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    overflow: hidden;
     align-items: center;
     flex: 1;
     color: lighten($ash, 20%);
     font-size: 1.8rem;
     gap: 4.8rem;
     padding: 0 6rem;
+    // border: 1px solid blue;
+    max-height: 6rem;
+    .item {
+      display: flex;
+      // border: 1px solid red;
+      align-items: center;
+      height: 100%;
+    }
   }
 
   .getTicket {
@@ -96,45 +103,84 @@
   @include hide;
 
   @media screen and (min-width: 768px) {
-    @include show;
+    display: flex;
   }
 }
 
 .header {
   @include grid;
-
   font-weight: 600;
+  position: absolute;
+  max-width: 100vw;
+  overflow: hidden;
+  
+
+  @media screen and (min-width: 768px) {
+    background-color: $white;
+    box-shadow: 0px 1px 10px $grey;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
   .topNav {
-    @include topNav();
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(
+        2.4rem,
+        10vw
+      )
+      [full-end];
+    color: $grey;
+    background-color: $ash;
+    .top {
+      @include grid-item;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2.4rem;
+      padding: 0.6rem 0;
+    }
+
+    .item {
+      width: fit-content;
+      display: flex;
+
+      a {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+      }
+
+      svg {
+        width: 2.4rem;
+        fill: $grey;
+      }
+    }
+    
+    @include hide;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+    }
   }
 
   .mainNav {
     @include mainNav();
   }
-
-  @media screen and (min-width: 768px) {
-    .topNav {
-      @include grid;
-
-      padding: 0.6rem 0;
-
-      .top {
-        @include grid-item;
-      }
-    }
-  }
 }
 
 .mobileNav {
   @include grid-item;
-
-  padding: 1.2rem 2.4rem;
-  position: absolute;
-  width: 100vw;
+  padding: 1.2rem 0;
+  z-index: 3000;
 
   svg {
+    width: 2.8rem;
     fill: $ash;
+    filter: drop-shadow(0px -.75px 0 $ash);
   }
 
   @media screen and (min-width: 768px) {
@@ -148,7 +194,9 @@
   z-index: 100;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
+  position: sticky;
+  top: 0;
+  background-color: $grey-light;
 
   .topNav {
     @include topNav();
@@ -186,17 +234,25 @@
 
     .main {
       flex-direction: column;
-      border: 5px solid white;
       width: 100%;
       gap: 2.4rem;
       margin: 2.4rem 0;
+      justify-content: center;
+      padding: 0;
+      flex-wrap: nowrap;
+      align-items: center;
+      color: $white;
+      font-size: 1.8rem;
+      max-height: 100%;
 
       li {
-        border: 1px solid $primary-color;
-        width: 85vw;
-        text-align: center;
+        width: 100%;
         padding: 1.2rem;
-        font-weight: 700;
+        font-weight: 600;
+        justify-content: center;
+        font-size: 2.4rem;
+        background-color: $primary-color;
+        flex: 1;
       }
     }
 
@@ -208,7 +264,6 @@
 
   .mobileNav {
     width: 100vw;
-    position: absolute;
     padding: 1.2rem;
     display: flex;
     justify-content: center;
@@ -216,6 +271,7 @@
 
     svg {
       fill: $white;
+      filter: drop-shadow(0px -.75px 0 $white);
     }
   }
 }

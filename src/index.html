@@ -7,13 +7,177 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
   <script defer type="module" src="app.js"></script>
 </head>
 <body>
-  <div class="container"></div>
+  <div class="container">
+    <header class="header">
+      <div class="topNav">
+        <nav class="top">
+          <li class="item">
+            <a class="insta-link" href="#">
+              <svg viewBox="0 0 100 100" class="instagram">
+                <use xlink:href="sprite.svg#instagram"></use>
+              </svg>  
+            </a>
+          </li>
+          <li class="item">
+            <a class="twitter-link" href="#">
+              <svg viewBox="0 0 100 100" class="twitter">
+                <use xlink:href="sprite.svg#twitter"></use>
+              </svg>  
+            </a>
+          </li>
+          <li class="item">
+            <a class="english-link" href="#english">
+              English
+            </a>
+          </li>
+          <li class="item">
+            <a class="myPage-link" href="#myPage">
+              My Page
+            </a>
+          </li>
+          <li class="item">
+            <a class="login-link" href="#login">
+              Login
+            </a>
+          </li>
+        </nav>
+      </div>
+      <div class="mainNav">
+        <a href="#home">
+          <figure class="logoBox">
+            <svg viewBox="0 0 100 100" class="circle-waveform-lines">
+              <use  xlink:href="sprite.svg#circle-waveform-lines"></use>
+            </svg> 
+            <div class="logoText">
+              <h3>Regga<span class="red"><em>educa</em></span>ton</h3>
+              <h5>Concert Tour 2023</h5>
+            </div>
+          </figure>
+        </a>
+        <nav class="main">
+          <li class="item">
+            <a class="home-link" href="#home">
+              Home
+            </a>
+          </li>
+          <li class="item">
+            <a class="about-link" href="#about">
+              About
+            </a>
+          </li>
+          <li class="item">
+            <a class="join-link" href="#join">
+              Join
+            </a>
+          </li>
+          <li class="item">
+            <a class="sponsor-link" href="#sponsor">
+              Sponsor
+            </a>
+          </li>
+          <li class="item">
+            <a class="news-link" href="#news">
+              News
+            </a>
+          </li>
+        </nav>
+        <button type="button" class="getTicket">Purchase Tickets</button>
+      </div>
+      <div class="mobileNav">
+        <svg viewBox="0 0 100 100" class="menu-burger">
+          <use  xlink:href="sprite.svg#menu-burger"></use>
+        </svg>
+      </div>
+    </header>
+    <div id="page" class="home">
+      <section class="hero">  
+        <article class="card">
+          <h3>"Say It Loud!"</h3>
+          <h1>
+            <span class="line1">
+            Regga<em>educa</em>ton
+            </span>
+            <span class="line2">Concert Tour</span>
+            <span class="line3">2023</span>
+          </h1>
+          <p>Get ready to vibe and make a real impact with the hottest reggaeton tour in town, putting your dance moves to work for our local schools. Let's hit the floor, and turn up the education!
+            <svg viewBox="0 0 100 100" class="dial">
+              <use xlink:href="sprite.svg#dial"></use>
+            </svg>
+            <svg viewBox="0 0 100 100" class="microphone-alt">
+              <use xlink:href="sprite.svg#microphone-alt"></use>
+            </svg>
+          </p>
+          <h3 class="dates">26.08(SAT) ~ 30.12(SAT)</h3>
+          <h5>@ Arsenal Studio, Ivan de Bodout Colisseum, and more.</h5>
+          
+        </article>
+        <svg viewBox="0 0 100 100" class="checkers">
+          <use xlink:href="sprite.svg#checkers"></use>
+        </svg>
+        <svg viewBox="0 0 100 100" class="headset">
+          <use  xlink:href="sprite.svg#headset"></use>
+        </svg>
+        <svg viewBox="0 0 100 100" class="wave-square-1">
+          <use xlink:href="sprite.svg#wave-square"></use>
+        </svg>
+        <svg viewBox="0 0 100 100" class="wave-square-2">
+          <use xlink:href="sprite.svg#wave-square"></use>
+        </svg>
+        <svg viewBox="0 0 100 100" class="music-alt">
+          <use  xlink:href="sprite.svg#music-alt"></use>
+        </svg>
+      </section>
+      <section class="program">
+        <h3>Main Program</h3>
+        <div class="badges">
+          <div class="badge">
+            <svg viewBox="0 0 100 100" class="music-alt">
+            <use  xlink:href="sprite.svg#music-alt"></use>
+            </svg>
+            <h6>La Calle</h6>
+            <p>Our master of ceremonies Evie Queen takes to the street, through the history of reggaeton and introduces our featured artist</p>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 100 100" class="music-alt">
+            <use  xlink:href="sprite.svg#music-alt"></use>
+            </svg>
+            <h6>The Journey</h6>
+            <p>The featured artist tells the story of their journey and place in reggaeton's history</p>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 100 100" class="music-alt">
+            <use  xlink:href="sprite.svg#music-alt"></use>
+            </svg>
+            <h6>Q & A</h6>
+            <p>The artist will take questions from the audience.</p>
+          </div>
+          
+          <div class="badge">
+            <svg viewBox="0 0 100 100" class="music-alt">
+            <use  xlink:href="sprite.svg#music-alt"></use>
+            </svg>
+            <h6>The Music</h6>
+            <p>The artist will perform their greatest hits</p>
+          </div>
+          <div class="badge">
+            <svg viewBox="0 0 100 100" class="music-alt">
+            <use  xlink:href="sprite.svg#music-alt"></use>
+            </svg>
+            <h6>Dance Party</h6>
+            <p>The preformances are followed by a club style dance party.</p>
+          </div>
+        </div>
+        <button type="button" class="join">Join us, buy your tickets now!  </button>
+      </section>
+    </div>
+  </div>
   <div class="holdSVG">
     <img src="https://festivaltips.dk/wp-content/uploads/2019/05/Festival-720x340.jpg" width="100%">
-
     <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F556870729%2F1630479013993%2F1%2Foriginal.20230717-224003?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C410%2C828%2C414&s=0c927410f4bf96764e5eeecc9ddb71f4" width="100%">
     <svg viewBox="0 0 100 100" class="checkers">
       <use xlink:href="sprite.svg#checkers"></use>
@@ -30,14 +194,12 @@
     <svg viewBox="0 0 100 100" class="instagram">
       <use xlink:href="sprite.svg#instagram"></use>
     </svg>  
-    <svg viewBox="0 0 100 100" class="menu-burger">
-      <use  xlink:href="sprite.svg#menu-burger"></use>
-    </svg>
+    
     <svg viewBox="0 0 100 100" class="mic">
       <use xlink:href="sprite.svg#mic"></use>
     </svg>  
-    <svg viewBox="0 0 100 100" class="microphne-alt">
-      <use  xlink:href="sprite.svg#microphne-alt"></use>
+    <svg viewBox="0 0 100 100" class="microphone-alt">
+      <use  xlink:href="sprite.svg#microphone-alt"></use>
     </svg>
     <svg viewBox="0 0 100 100" class="music-alt">
       <use xlink:href="sprite.svg#music-alt"></use>

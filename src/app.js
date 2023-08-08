@@ -1,36 +1,12 @@
-import './global.scss';
+// import './global.scss';
+import router from './controllers/router.js';
 import { grab, onClick } from './utils/utils.js';
-import home from './views/pages/home.js';
-import about from './views/pages/about.js';
 
-// Render the Inital App Layout
-import renderLayout from './views/layout.js';
-
-// Add Page Routing
-import { router, addRoute } from './controllers/router.js';
-
-renderLayout(home());
-
-// Place SVGs
-const instaLink = grab('.insta-link');
-const instaIcon = grab('.instagram');
-const twitterLink = grab('.twitter-link');
-const twitter = grab('.twitter');
-instaLink.appendChild(instaIcon);
-twitterLink.appendChild(twitter);
-const logoBox = grab('.logoBox');
-const logo = grab('.circle-waveform-lines');
-logoBox.insertBefore(logo, logoBox.firstChild);
-const mobileNav = grab('.mobileNav');
-const menuBurger = grab('.menu-burger');
-mobileNav.appendChild(menuBurger);
-addRoute('', home()); // param1 = name of the page, param 2 = the pages markup
-addRoute('about', about());
-router();
-
-// Controls
+// Initial render of home
+// grab('.about').style.display = 'none';
 
 // Toggle mobile menu
+const menuBurger = grab('.menu-burger');
 const header = grab('header');
 const toggleMenu = () => {
   const { className } = header;
@@ -51,3 +27,5 @@ onClick(menuBurger, toggleMenu);
 // // Add Listeners
 // onClick(navHome, () => render(page, home));
 // onClick(navAbout, () => render(page, about));
+
+router();
