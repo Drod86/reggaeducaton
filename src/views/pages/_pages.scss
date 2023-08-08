@@ -163,12 +163,39 @@
       height: 100vh;
       font-size: 3rem;
       background-position: 0 -80vh;
+      padding: 0;
 
       .card {
         max-width: 80%;
+        border: 1px solid red;
+        margin-top: 5%;
+        padding-bottom: 0;
 
         h1{
-          font-size: 10rem;
+          font-size: 7rem;
+          line-height: 7rem
+        }
+
+        p {
+          max-width: 55rem;
+          font-size: 1.5rem;
+          line-height: 3rem;
+          margin-bottom: 2.4rem;
+
+          .dial {
+            width: 18rem;
+            top: -10rem;
+            right: -10rem;
+          }
+        }
+
+        .dates {
+          font-size: 3rem;
+          margin-bottom: 1.2rem;
+        }
+
+        h5 {
+          font-size: 1.6rem;
         }
       }
     }
