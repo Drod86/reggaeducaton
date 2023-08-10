@@ -1,14 +1,13 @@
-'use strict';
-
 const artistCard = (artistData) => {
-  const {fullName, songs, blurb, imgUrl} = artistData;
+  const {
+    fullName, songs, blurb, imgUrl,
+  } = artistData;
   const songsString = songs.reduce((acc, song, i) => {
-    if (i === songs.length -1) {
-      return acc + song + ' ';
-    } else {
-      return acc + song + ', ';
+    if (i === songs.length - 1) {
+      return `${acc + song} `;
     }
-  }, ``);
+    return `${acc + song}, `;
+  }, '');
 
   return `
     <div class="card">
@@ -24,7 +23,7 @@ const artistCard = (artistData) => {
         <p class="description">${blurb}</p>
       </div>
     </div>
-  `
-}
+  `;
+};
 
 export default artistCard;

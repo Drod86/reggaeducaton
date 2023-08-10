@@ -5,9 +5,10 @@ import db from './models/db.js';
 
 // Dynamically add featured artists
 import artistCard from './views/components/artistCard.js';
+
 const featuredCards = grab('.cards');
 const { artists } = db;
-const featuredArtists = artists.reduce((acc, artist) => acc + artistCard(artist), ``);
+const featuredArtists = artists.reduce((acc, artist) => acc + artistCard(artist), '');
 render(featuredCards, featuredArtists);
 
 // Toggle mobile menu

@@ -2,51 +2,64 @@
   from {
     transform: scale(100%);
   }
+
   50% {
     transform: scale(110%);
   }
+
   to {
     transform: scale(100%);
   }
 }
+
 @keyframes bounceInLeft {
   from {
     transform: translateX(-200%);
   }
+
   50% {
     transform: translateX(10%);
   }
+
   to {
     transform: translateX(0%);
   }
 }
+
 @keyframes bounceInRight {
   from {
     transform: translateX(200%);
   }
+
   50% {
     transform: translateX(-10%);
   }
+
   to {
     transform: translateX(0%);
   }
 }
+
 @keyframes fade-In {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 @keyframes menu-open {
   from {
     transform: translateY(-200%);
   }
+
   to {
     transform: translateY(0%);
   }
 }
+
 .header {
   display: grid;
   grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
@@ -56,20 +69,23 @@
   max-width: 100vw;
   overflow: hidden;
 }
+
 @media screen and (min-width: 768px) {
   .header {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 @media screen and (min-width: 768px) {
   .header {
     background-color: #fff;
-    box-shadow: 0px 1px 10px #d3d3d3;
+    box-shadow: 0 1px 10px #d3d3d3;
     position: sticky;
     top: 0;
     z-index: 1000;
   }
 }
+
 .header .topNav {
   grid-column: full-start/full-end;
   display: grid;
@@ -78,6 +94,7 @@
   background-color: #474747;
   display: none;
 }
+
 .header .topNav .top {
   grid-column: center-start/center-end;
   display: flex;
@@ -86,11 +103,13 @@
   gap: 2.4rem;
   padding: 0.6rem 0;
 }
+
 .header .topNav .item {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
 }
+
 .header .topNav .item a {
   width: -moz-fit-content;
   width: fit-content;
@@ -98,43 +117,52 @@
   height: fit-content;
   display: flex;
 }
+
 .header .topNav .item svg {
   width: 2.4rem;
   fill: #d3d3d3;
 }
+
 @media screen and (min-width: 768px) {
   .header .topNav {
     display: grid;
   }
 }
+
 .header .mainNav {
   grid-column: center-start/center-end;
   flex-direction: row;
   padding: 1.2rem 0;
   display: none;
 }
+
 .header .mainNav .logoBox {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   font-size: 2.4rem;
 }
+
 .header .mainNav .logoBox .logoText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .header .mainNav .logoBox .logoText h5 {
   font-weight: 700;
 }
+
 .header .mainNav .logoBox .logoText .red {
   color: #ec5242;
 }
+
 .header .mainNav .logoBox svg {
   width: 5rem;
   fill: #474747;
   filter: drop-shadow(2px -1.5px 0 #ec5242);
 }
+
 .header .mainNav .main {
   display: flex;
   justify-content: flex-end;
@@ -148,11 +176,13 @@
   padding: 0 6rem;
   max-height: 6rem;
 }
+
 .header .mainNav .main .item {
   display: flex;
   align-items: center;
   height: 100%;
 }
+
 .header .mainNav .getTicket {
   background-color: #fff;
   border: 5px solid #ec5242;
@@ -160,6 +190,7 @@
   font-size: 1.8rem;
   font-weight: 700;
 }
+
 @media screen and (min-width: 768px) {
   .header .mainNav {
     display: flex;
@@ -171,11 +202,13 @@
   padding: 1.2rem 0;
   z-index: 3000;
 }
+
 .mobileNav svg {
   width: 2.8rem;
   fill: #474747;
-  filter: drop-shadow(0px -0.75px 0 #474747);
+  filter: drop-shadow(0 -0.75px 0 #474747);
 }
+
 @media screen and (min-width: 768px) {
   .mobileNav {
     display: none;
@@ -192,6 +225,7 @@
   top: 0;
   background-color: #f9f9f9;
 }
+
 .openNav .topNav {
   grid-column: full-start/full-end;
   display: grid;
@@ -204,6 +238,7 @@
   position: absolute;
   bottom: 0;
 }
+
 .openNav .topNav .top {
   display: flex;
   justify-content: flex-end;
@@ -211,11 +246,13 @@
   gap: 2.4rem;
   padding: 0.6rem 0;
 }
+
 .openNav .topNav .item {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
 }
+
 .openNav .topNav .item a {
   width: -moz-fit-content;
   width: fit-content;
@@ -223,18 +260,22 @@
   height: fit-content;
   display: flex;
 }
+
 .openNav .topNav .item svg {
   width: 2.4rem;
   fill: #d3d3d3;
 }
+
 @media screen and (min-width: 768px) {
   .openNav .topNav {
     display: inline-block;
   }
 }
+
 .openNav .topNav .top {
   justify-content: center;
 }
+
 .openNav .mainNav {
   grid-column: center-start/center-end;
   flex-direction: row;
@@ -248,28 +289,34 @@
   top: 4.8rem;
   padding: 2.4rem;
 }
+
 .openNav .mainNav .logoBox {
   display: flex;
   align-items: center;
   gap: 0.6rem;
   font-size: 2.4rem;
 }
+
 .openNav .mainNav .logoBox .logoText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .openNav .mainNav .logoBox .logoText h5 {
   font-weight: 700;
 }
+
 .openNav .mainNav .logoBox .logoText .red {
   color: #ec5242;
 }
+
 .openNav .mainNav .logoBox svg {
   width: 5rem;
   fill: #474747;
   filter: drop-shadow(2px -1.5px 0 #ec5242);
 }
+
 .openNav .mainNav .main {
   display: flex;
   justify-content: flex-end;
@@ -283,11 +330,13 @@
   padding: 0 6rem;
   max-height: 6rem;
 }
+
 .openNav .mainNav .main .item {
   display: flex;
   align-items: center;
   height: 100%;
 }
+
 .openNav .mainNav .getTicket {
   background-color: #fff;
   border: 5px solid #ec5242;
@@ -295,18 +344,22 @@
   font-size: 1.8rem;
   font-weight: 700;
 }
+
 @media screen and (min-width: 768px) {
   .openNav .mainNav {
     display: flex;
   }
 }
+
 .openNav .mainNav .logoBox {
   justify-content: center;
   gap: 1.2rem;
 }
+
 .openNav .mainNav .logoBox .logoText {
   align-items: center;
 }
+
 .openNav .mainNav .main {
   flex-direction: column;
   width: 100%;
@@ -320,6 +373,7 @@
   font-size: 1.8rem;
   max-height: 100%;
 }
+
 .openNav .mainNav .main li {
   width: 100%;
   padding: 1.2rem;
@@ -329,10 +383,12 @@
   background-color: #ec5242;
   flex: 1;
 }
+
 .openNav .mainNav button {
   width: 100%;
   padding: 1.2rem;
 }
+
 .openNav .mobileNav {
   width: 100vw;
   padding: 1.2rem;
@@ -340,9 +396,10 @@
   justify-content: center;
   background-color: #ec5242;
 }
+
 .openNav .mobileNav svg {
   fill: #fff;
-  filter: drop-shadow(0px -0.75px 0 #fff);
+  filter: drop-shadow(0 -0.75px 0 #fff);
 }
 
 .heading {
@@ -355,6 +412,7 @@
   width: 100vw;
   width: 100%;
 }
+
 @media screen and (min-width: 768px) {
   #page {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
@@ -372,53 +430,62 @@
   background-repeat: no-repeat;
   background-position: 0 -50vh;
 }
+
 @media screen and (min-width: 768px) {
   .home .hero {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 .home .hero::before {
   content: "";
   width: 100vw;
   height: 100%;
   background: linear-gradient(to bottom, rgba(249, 249, 249, 0.9), #f9f9f9, 55%, #f9f9f9);
 }
+
 .home .hero svg {
   fill: #e0e0e0;
 }
+
 .home .hero .checkers {
   width: 7rem;
   -webkit-clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
-          clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+  clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
   transform: rotate(45deg);
   top: 0.6rem;
   left: 60vw;
   position: absolute;
 }
+
 .home .hero .wave-square-1 {
   width: 2.4rem;
   position: absolute;
   right: 4.8vw;
   top: 4.8rem;
 }
+
 .home .hero .wave-square-2 {
   position: absolute;
   left: 16vw;
   bottom: 1.2rem;
   fill: #d3d3d3;
 }
+
 .home .hero .music-alt {
   position: absolute;
   right: 16vw;
   bottom: 2.4rem;
   fill: #d3d3d3;
 }
+
 .home .hero .headset {
   width: 2.4rem;
   position: absolute;
   top: 4.8rem;
   left: 18vw;
 }
+
 .home .hero .card {
   grid-column: center-start/center-end;
   margin-top: 14vh;
@@ -426,10 +493,12 @@
   height: fit-content;
   padding-bottom: 10vh;
 }
+
 .home .hero .card h3 {
   font-weight: 500;
   color: #ec5242;
 }
+
 .home .hero .card h1 {
   font-size: 3rem;
   font-weight: 900;
@@ -448,6 +517,7 @@
   margin-bottom: 2.4rem;
   transform-style: preserve-3d;
 }
+
 .home .hero .card p {
   position: relative;
   border: 3px solid #fff;
@@ -459,6 +529,7 @@
   line-height: 1.8rem;
   font-weight: 600;
 }
+
 .home .hero .card p .dial {
   position: absolute;
   top: -5rem;
@@ -468,6 +539,7 @@
   transform: translateZ(-10px);
   filter: drop-shadow(2px 2px 0 #ec5242);
 }
+
 .home .hero .card p .microphone-alt {
   width: 3.6rem;
   position: absolute;
@@ -475,16 +547,19 @@
   left: 2.4rem;
   transform: translateZ(-10px);
 }
+
 .home .hero .card .dates {
   color: #474747;
   font-weight: 900;
   margin-bottom: 0.6rem;
   font-size: 2.2rem;
 }
+
 .home .hero .card h5 {
   color: #6b7386;
   font-weight: 600;
 }
+
 @media screen and (min-width: 769px) {
   .home .hero {
     height: 100vh;
@@ -492,39 +567,46 @@
     background-position: 0 -80vh;
     padding: 0;
   }
+
   .home .hero .card {
     max-width: 80%;
     margin-top: 5%;
     padding-bottom: 0;
   }
+
   .home .hero .card h1 {
     font-size: 7rem;
     line-height: 7rem;
   }
+
   .home .hero .card p {
     max-width: 55rem;
     font-size: 1.5rem;
     line-height: 3rem;
     margin-bottom: 2.4rem;
   }
+
   .home .hero .card p .dial {
     width: 18rem;
     top: -10rem;
     right: -10rem;
   }
+
   .home .hero .card .dates {
     font-size: 3rem;
     margin-bottom: 1.2rem;
   }
+
   .home .hero .card h5 {
     font-size: 1.6rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   .home .hero .checkers {
     width: 10.5rem;
     -webkit-clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
-            clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+    clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
     transform: rotate(45deg);
     top: auto;
     bottom: 20rem;
@@ -532,12 +614,14 @@
     right: 20vw;
     position: absolute;
   }
+
   .home .hero .wave-square-1 {
     width: 5rem;
     position: absolute;
     right: 4.8vw;
     top: 30rem;
   }
+
   .home .hero .wave-square-2 {
     position: absolute;
     left: 5rem;
@@ -545,6 +629,7 @@
     width: 4rem;
     fill: #d3d3d3;
   }
+
   .home .hero .music-alt {
     position: absolute;
     top: 15rem;
@@ -553,6 +638,7 @@
     fill: #d3d3d3;
     width: 5rem;
   }
+
   .home .hero .headset {
     width: 2.4rem;
     position: absolute;
@@ -563,21 +649,24 @@
     transform: rotate(45deg);
   }
 }
+
 .home .program {
   grid-column: full-start/full-end;
   display: grid;
   grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
   width: 100vw;
   width: 100vw;
-  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url("../../wave-square.svg");
+  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url("./wave-square.svg");
   background-size: 2.4rem 2.4rem;
   color: #fff;
 }
+
 @media screen and (min-width: 768px) {
   .home .program {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 .home .program .sectionHeading {
   grid-column: center-start/center-end;
   display: flex;
@@ -586,20 +675,24 @@
   gap: 0.6rem;
   margin: 3rem 0;
 }
+
 .home .program .sectionHeading::after {
   content: "";
   height: 0.6rem;
   width: 2.4rem;
   border-bottom: 1px solid #ec5242;
 }
+
 @media screen and (min-width: 768px) {
   .home .program .sectionHeading {
     font-size: 3rem;
   }
+
   .home .program .sectionHeading::after {
     width: 4.8rem;
   }
 }
+
 .home .program .badges {
   grid-column: center-start/center-end;
   display: flex;
@@ -607,6 +700,7 @@
   flex-wrap: wrap;
   margin-bottom: 3rem;
 }
+
 .home .program .badges .badge {
   display: flex;
   align-items: center;
@@ -615,26 +709,31 @@
   background-color: rgba(255, 255, 255, 0.1);
   width: 100%;
 }
+
 .home .program .badges .badge svg {
   fill: #fff;
   filter: drop-shadow(2px 2px 0 #ec5242);
   width: 7.5%;
 }
+
 .home .program .badges .badge h6 {
   color: #ec5242;
   font-size: 1.5rem;
   width: 20%;
   padding: 0 2.4rem 0 0.9rem;
 }
+
 .home .program .badges .badge p {
   font-size: 1.2rem;
   flex: 1;
 }
+
 @media screen and (min-width: 768px) {
   .home .program .badges {
     gap: 0.6rem;
     justify-content: center;
   }
+
   .home .program .badges .badge {
     flex: 1;
     display: flex;
@@ -645,12 +744,14 @@
     gap: 2.4rem;
     padding: 2.4rem 1.2rem;
   }
+
   .home .program .badges .badge svg {
     fill: #fff;
     filter: drop-shadow(2px 2px 0 #ec5242);
     height: 4.2rem;
     width: 4.2rem;
   }
+
   .home .program .badges .badge h6 {
     color: #ec5242;
     font-size: 2.4rem;
@@ -659,6 +760,7 @@
     min-width: 25%;
     padding: 0;
   }
+
   .home .program .badges .badge p {
     color: #d3d3d3;
     flex: 1;
@@ -668,6 +770,7 @@
     font-weight: 600;
   }
 }
+
 .home .program .join {
   grid-column: center-start/center-end;
   margin-bottom: 3rem;
@@ -676,6 +779,7 @@
   background-color: #ec5242;
   font-size: 2rem;
 }
+
 .home .program .also {
   grid-column: center-start/center-end;
   text-align: center;
@@ -683,27 +787,33 @@
   text-decoration: underline;
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .home .program {
     padding: 3rem 0;
   }
+
   .home .program .join {
     display: none;
   }
+
   .home .program .also {
     display: inline-block;
   }
 }
+
 .home .featured {
   display: grid;
   grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
   width: 100vw;
 }
+
 @media screen and (min-width: 768px) {
   .home .featured {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 .home .featured .sectionHeading {
   grid-column: center-start/center-end;
   display: flex;
@@ -712,20 +822,24 @@
   gap: 0.6rem;
   margin: 3rem 0;
 }
+
 .home .featured .sectionHeading::after {
   content: "";
   height: 0.6rem;
   width: 2.4rem;
   border-bottom: 1px solid #ec5242;
 }
+
 @media screen and (min-width: 768px) {
   .home .featured .sectionHeading {
     font-size: 3rem;
   }
+
   .home .featured .sectionHeading::after {
     width: 4.8rem;
   }
 }
+
 .home .featured .cards {
   grid-column: center-start/center-end;
   display: flex;
@@ -733,6 +847,7 @@
   gap: 2.4rem;
   justify-content: space-between;
 }
+
 .home .featured .cards .card {
   display: flex;
   gap: 1.2rem;
@@ -740,11 +855,13 @@
   height: -moz-fit-content;
   height: fit-content;
 }
+
 @media screen and (min-width: 768px) {
   .home .featured .cards .card {
     max-width: 48%;
   }
 }
+
 .home .featured .cards .card .portrait {
   position: relative;
   width: -moz-max-content;
@@ -752,24 +869,28 @@
   padding: 1.2rem 0 0 1.2rem;
   width: 30%;
 }
+
 @media screen and (min-width: 768px) {
   .home .featured .cards .card .portrait {
     width: 25%;
   }
 }
+
 .home .featured .cards .card .portrait .checkers {
   fill: #32363f;
   width: 10rem;
   -webkit-clip-path: inset(2.07rem 3.56rem 2.56rem 1.05rem);
-          clip-path: inset(2.07rem 3.56rem 2.56rem 1.05rem);
+  clip-path: inset(2.07rem 3.56rem 2.56rem 1.05rem);
   position: absolute;
   top: -2rem;
   left: -1rem;
 }
+
 .home .featured .cards .card .portrait img {
   width: 100%;
   position: relative;
 }
+
 .home .featured .cards .card .profile {
   flex: 1;
   display: flex;
@@ -777,14 +898,17 @@
   gap: 0.6rem;
   position: relative;
 }
+
 .home .featured .cards .card .profile h3 {
   color: #272a31;
   font-size: 1.4rem;
 }
+
 .home .featured .cards .card .profile h5 {
   color: #ec5242;
   font-size: 1rem;
 }
+
 .home .featured .cards .card .profile p::before {
   content: "";
   width: 2rem;
@@ -793,22 +917,27 @@
   left: 0;
   top: -1.2rem;
 }
+
 .home .featured .cards .card .profile p {
   font-size: 1rem;
   margin-top: 2rem;
   position: relative;
 }
+
 @media screen and (min-width: 768px) {
   .home .featured .cards .card .profile h3 {
     font-size: 2rem;
   }
+
   .home .featured .cards .card .profile h5 {
     font-size: 1.3rem;
   }
+
   .home .featured .cards .card .profile p {
     font-size: 1.3rem;
   }
 }
+
 .home .featured button {
   grid-column: center-start/center-end;
   border: 2px solid #d3d3d3;
@@ -818,21 +947,26 @@
   margin: 3rem 0;
   padding: 1.2rem;
 }
+
 .home .featured button .red {
   color: #ec5242;
   transform: skew(20%, 50%);
 }
+
 @media screen and (min-width: 768px) {
   .home .featured button {
     visibility: hidden;
   }
 }
+
 .home .partners {
   display: none;
 }
+
 .home footer {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .home .partners {
     grid-column: full-start/full-end;
@@ -842,16 +976,19 @@
     padding: 3rem;
   }
 }
+
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .home .partners {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 @media screen and (min-width: 768px) {
   .home .partners .container {
     grid-column: center-start/center-end;
     width: 100%;
   }
+
   .home .partners .sectionHeading {
     display: flex;
     flex-direction: column;
@@ -860,12 +997,14 @@
     font-size: 2.4rem;
     color: gray;
   }
+
   .home .partners .sectionHeading::after {
     content: "";
     height: 0.6rem;
     width: 2.4rem;
     border-bottom: 1px solid #ec5242;
   }
+
   .home footer {
     grid-column: full-start/full-end;
     display: grid;
@@ -873,17 +1012,20 @@
     width: 100vw;
   }
 }
+
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .home footer {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 @media screen and (min-width: 768px) {
   .home footer .container {
     grid-column: center-start/center-end;
     width: 100%;
   }
 }
+
 .home .about {
   display: none;
 }
@@ -899,53 +1041,62 @@
   background-repeat: no-repeat;
   background-position: 0 -50vh;
 }
+
 @media screen and (min-width: 768px) {
   .about .hero {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 .about .hero::before {
   content: "";
   width: 100vw;
   height: 100%;
   background: linear-gradient(to bottom, rgba(249, 249, 249, 0.9), #f9f9f9, 55%, #f9f9f9);
 }
+
 .about .hero svg {
   fill: #e0e0e0;
 }
+
 .about .hero .checkers {
   width: 7rem;
   -webkit-clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
-          clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+  clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
   transform: rotate(45deg);
   top: 0.6rem;
   left: 60vw;
   position: absolute;
 }
+
 .about .hero .wave-square-1 {
   width: 2.4rem;
   position: absolute;
   right: 4.8vw;
   top: 4.8rem;
 }
+
 .about .hero .wave-square-2 {
   position: absolute;
   left: 16vw;
   bottom: 1.2rem;
   fill: #d3d3d3;
 }
+
 .about .hero .music-alt {
   position: absolute;
   right: 16vw;
   bottom: 2.4rem;
   fill: #d3d3d3;
 }
+
 .about .hero .headset {
   width: 2.4rem;
   position: absolute;
   top: 4.8rem;
   left: 18vw;
 }
+
 .about .hero .card {
   grid-column: center-start/center-end;
   margin-top: 14vh;
@@ -953,10 +1104,12 @@
   height: fit-content;
   padding-bottom: 10vh;
 }
+
 .about .hero .card h3 {
   font-weight: 500;
   color: #ec5242;
 }
+
 .about .hero .card h1 {
   font-size: 3rem;
   font-weight: 900;
@@ -975,6 +1128,7 @@
   margin-bottom: 2.4rem;
   transform-style: preserve-3d;
 }
+
 .about .hero .card p {
   position: relative;
   border: 3px solid #fff;
@@ -986,6 +1140,7 @@
   line-height: 1.8rem;
   font-weight: 600;
 }
+
 .about .hero .card p .dial {
   position: absolute;
   top: -5rem;
@@ -995,6 +1150,7 @@
   transform: translateZ(-10px);
   filter: drop-shadow(2px 2px 0 #ec5242);
 }
+
 .about .hero .card p .microphone-alt {
   width: 3.6rem;
   position: absolute;
@@ -1002,16 +1158,19 @@
   left: 2.4rem;
   transform: translateZ(-10px);
 }
+
 .about .hero .card .dates {
   color: #474747;
   font-weight: 900;
   margin-bottom: 0.6rem;
   font-size: 2.2rem;
 }
+
 .about .hero .card h5 {
   color: #6b7386;
   font-weight: 600;
 }
+
 @media screen and (min-width: 769px) {
   .about .hero {
     height: 100vh;
@@ -1019,42 +1178,50 @@
     background-position: 0 -80vh;
     padding: 0;
   }
+
   .about .hero .card {
     max-width: 80%;
     margin-top: 5%;
     padding-bottom: 0;
   }
+
   .about .hero .card h1 {
     font-size: 7rem;
     line-height: 7rem;
   }
+
   .about .hero .card p {
     max-width: 55rem;
     font-size: 1.5rem;
     line-height: 3rem;
     margin-bottom: 2.4rem;
   }
+
   .about .hero .card p .dial {
     width: 18rem;
     top: -10rem;
     right: -10rem;
   }
+
   .about .hero .card .dates {
     font-size: 3rem;
     margin-bottom: 1.2rem;
   }
+
   .about .hero .card h5 {
     font-size: 1.6rem;
   }
 }
+
 .about .hero .checkers {
   border-radius: 5rem;
   fill: #ec5242;
   -webkit-clip-path: circle(10px);
-          clip-path: circle(10px);
+  clip-path: circle(10px);
   left: 4.8rem;
   top: 2.4rem;
 }
+
 .about .hero .headset {
   fill: #272a31;
   top: 7.5rem;
@@ -1063,23 +1230,28 @@
   transform: rotate(45deg);
   z-index: 2;
 }
+
 .about .hero .card {
   padding-bottom: 3.6rem;
 }
+
 @media screen and (min-width: 768px) {
   .about .hero .card {
     border: 1px solid red;
     max-width: auto;
   }
+
   .about .hero .card h1 {
     text-align: center;
     display: inline-block;
   }
 }
+
 .about .hero .card h3 {
   text-align: center;
   padding-bottom: 1.2rem;
 }
+
 .about .hero .card h1 {
   width: 100%;
   color: #ec5242;
@@ -1089,10 +1261,12 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .about .hero .card h1 .line3 {
   padding-left: 0.6rem;
   margin-bottom: 2.4rem;
 }
+
 @media screen and (min-width: 768px) {
   .about .hero .card h1::after {
     content: "";
@@ -1101,6 +1275,7 @@
     border-bottom: 1px solid #ec5242;
   }
 }
+
 .about .hero .card p {
   border: 2px solid #d3d3d3;
   background-color: #fff;
@@ -1108,13 +1283,16 @@
   transform-style: preserve-3d;
   text-align: center;
 }
+
 .about .hero .card p .dial {
   left: 1.2rem;
 }
+
 .about .hero .card p .microphone-alt {
   top: -9.6rem;
   left: 0;
 }
+
 .about .hero .card p .record-vinyl {
   position: absolute;
   width: 4.8rem;
@@ -1122,9 +1300,11 @@
   right: -2.4rem;
   transform: translateZ(-10px);
 }
+
 .about .hero .card .email {
   color: #272a31;
 }
+
 .about h5 {
   font-size: 1rem;
   display: flex;
@@ -1132,6 +1312,7 @@
   align-items: center;
   margin: 0;
 }
+
 .about .logo {
   grid-column: full-start/full-end;
   display: grid;
@@ -1139,11 +1320,13 @@
   width: 100vw;
   border-bottom: 2px solid #d3d3d3;
 }
+
 @media screen and (min-width: 768px) {
   .about .logo {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
+
 .about .logo .container {
   grid-column: center-start/center-end;
   display: flex;
@@ -1151,6 +1334,7 @@
   width: 100%;
   padding: 2.4rem 0;
 }
+
 .about .logo .container .sectionHeading {
   display: flex;
   flex-direction: column;
@@ -1158,17 +1342,20 @@
   gap: 0.6rem;
   font-size: 2.4rem;
 }
+
 .about .logo .container .sectionHeading::after {
   content: "";
   height: 0.6rem;
   width: 2.4rem;
   border-bottom: 1px solid #ec5242;
 }
+
 .about .logo .container h5 {
   text-align: center;
   padding: 1.2rem;
   color: #474747;
 }
+
 .about .logo .container .logoBox {
   display: flex;
   align-items: center;
@@ -1179,23 +1366,28 @@
   margin: 2.4rem 0;
   padding: 3rem;
 }
+
 .about .logo .container .logoBox .logoText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .about .logo .container .logoBox .logoText h6 {
   font-weight: 700;
   font-size: 2rem;
 }
+
 .about .logo .container .logoBox .logoText .red {
   color: #ec5242;
 }
+
 .about .logo .container .logoBox svg {
   width: 5rem;
   fill: #474747;
   filter: drop-shadow(2px -1.5px 0 #ec5242);
 }
+
 .about .logo .container .concertBox1 {
   display: flex;
   flex-direction: column;
@@ -1209,9 +1401,11 @@
   background: linear-gradient(rgba(236, 82, 66, 0.8), rgba(236, 82, 66, 0.8)), url("https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg");
   background-size: cover;
 }
+
 .about .logo .container .concertBox1 h6 {
   font-size: 1.4rem;
 }
+
 .about .logo .container .concertBox2 {
   display: flex;
   flex-direction: column;
@@ -1225,32 +1419,40 @@
   background: linear-gradient(rgba(236, 82, 66, 0.8), rgba(236, 82, 66, 0.8)), url("https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg");
   background-size: cover;
 }
+
 .about .logo .container .concertBox2 h6 {
   font-size: 1.4rem;
 }
+
 @media screen and (min-width: 768px) {
   .about .partners {
     display: none;
   }
+
   .about footer {
     color: #f9f9f9;
     background-color: #474747;
   }
+
   .about footer .container {
     background-color: #474747;
     padding: 3rem;
     font-size: 1.8rem;
   }
+
   .about footer .container .logoBox {
     font-size: 2rem;
   }
+
   .about footer .container .logoBox .logoText h6 {
     font-size: 1.7rem;
   }
+
   .about footer .container .logoBox svg {
     fill: #f9f9f9;
   }
 }
+
 .about .home {
   display: none;
 }
@@ -1259,6 +1461,7 @@
   color: #fff;
   background-color: #474747;
 }
+
 .partners ul {
   display: flex;
   justify-content: center;
@@ -1268,27 +1471,33 @@
   padding: 0;
   margin: 2.4rem 0;
 }
+
 .partners ul .thick {
   font-size: 3rem;
   font-weight: 900;
   color: #d3d3d3;
 }
+
 .partners ul .grey {
   text-align: center;
   font-size: 2rem;
   font-weight: 300;
   color: gray;
 }
+
 .partners ul .light {
   font-size: 3rem;
   font-weight: 600;
   color: #bababa;
 }
-.partners ul .bold, .partners ul .bolder {
+
+.partners ul .bold,
+.partners ul .bolder {
   font-size: 1.6rem;
   color: gray;
   font-weight: 600;
 }
+
 .partners ul .bolder {
   font-size: 1.8rem;
 }
@@ -1301,6 +1510,7 @@ footer .container {
   gap: 2.4rem;
   padding: 1.5rem 3rem;
 }
+
 footer .container .logoBox {
   display: flex;
   align-items: center;
@@ -1309,30 +1519,37 @@ footer .container .logoBox {
   justify-content: center;
   margin: 2.4rem 0;
 }
+
 footer .container .logoBox .logoText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 footer .container .logoBox h6 {
   font-weight: 700;
   font-size: 1rem;
 }
+
 footer .container .logoBox svg {
   width: 2.5rem;
   fill: #474747;
 }
+
 @media screen and (min-width: 768px) {
   footer .container {
     padding: 3rem;
     font-size: 1.8rem;
   }
+
   footer .container .logoBox {
     font-size: 2rem;
   }
+
   footer .container .logoBox .logoText h6 {
     font-size: 1.7rem;
   }
+
   footer .container .logoBox svg {
     width: 4rem;
   }
@@ -1383,4 +1600,4 @@ svg {
 
 .container {
   width: 100vw;
-}/*# sourceMappingURL=global.css.map */
+}

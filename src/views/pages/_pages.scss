@@ -2,11 +2,10 @@
 @import '../mixins';
 @import '../sections/hero';
 
-
-
 #page {
   @include grid;
-  width: 100%;  
+
+  width: 100%;
 }
 
 .home {
@@ -16,7 +15,7 @@
     @media screen and (min-width: 768px) {
       .checkers {
         width: 10.5rem;
-        clip-path: inset(2.1rem 3.15rem 1.75rem .7rem);
+        clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
         transform: rotate(45deg);
         top: auto;
         bottom: 20rem;
@@ -56,60 +55,63 @@
         left: auto;
         right: 40%;
         width: 5rem;
-        transform: rotate(45deg)
+        transform: rotate(45deg);
       }
     }
   }
 
   .program {
     @include nested-grid;
+
     width: 100vw;
-    background: linear-gradient(transparentize($black, .02), transparentize($black, .02)), url('../../wave-square.svg');
+    background: linear-gradient(transparentize($black, 0.02), transparentize($black, 0.02)), url('../../wave-square.svg');
     background-size: 2.4rem 2.4rem;
     color: $white;
     // gap: 2.4rem;
-    
 
     .sectionHeading {
       @include grid-item;
+
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: .6rem;
+      gap: 0.6rem;
       margin: 3rem 0;
+
       &::after {
         content: "";
-        height: .6rem;
+        height: 0.6rem;
         width: 2.4rem;
         border-bottom: 1px solid $primary-color;
       }
 
       @media screen and (min-width: 768px) {
         font-size: 3rem;
+
         &::after {
-        width: 4.8rem;
-      }
+          width: 4.8rem;
+        }
       }
     }
 
     .badges {
       @include grid-item;
+
       display: flex;
       gap: 1.2rem;
       flex-wrap: wrap;
       margin-bottom: 3rem;
       // justify-content: center;
       // padding: 2.4rem 0;
-      
+
       .badge {
         display: flex;
         // justify-content: space-between;
         align-items: center;
         gap: 1.2rem;
         padding: 1.2rem;
-        background-color: transparentize($white, .9);
+        background-color: transparentize($white, 0.9);
         width: 100%;
-
 
         svg {
           fill: $white;
@@ -117,17 +119,16 @@
           width: 7.5%;
           // flex: 1;
           // max-width: 3rem;
-
         }
 
-      h6 {
-            color: $primary-color;
-            font-size: 1.5rem;
-            // white-space: nowrap;
-            width: 20%;
-            // text-align: center;
-            padding: 0 2.4rem 0 .9rem;
-          }
+        h6 {
+          color: $primary-color;
+          font-size: 1.5rem;
+          // white-space: nowrap;
+          width: 20%;
+          // text-align: center;
+          padding: 0 2.4rem 0 0.9rem;
+        }
 
         p {
           // color: $grey;
@@ -135,18 +136,15 @@
           font-size: 1.2rem;
           // line-height: 1.6rem;
           flex: 1;
-          
-          
         }
-
       }
 
       @media screen and (min-width: 768px) {
-        gap: .6rem;
+        gap: 0.6rem;
         // flex-wrap: wrap;
         justify-content: center;
         // padding: 2.4rem 0;
-        
+
         .badge {
           flex: 1;
           display: flex;
@@ -156,7 +154,6 @@
           align-items: center;
           gap: 2.4rem;
           padding: 2.4rem 1.2rem;
-
 
           svg {
             fill: $white;
@@ -189,6 +186,7 @@
 
     .join {
       @include grid-item;
+
       margin-bottom: 3rem;
       padding: 3rem;
       color: $white;
@@ -198,6 +196,7 @@
 
     .also {
       @include grid-item;
+
       text-align: center;
       padding: 3rem;
       text-decoration: underline;
@@ -222,33 +221,37 @@
 
     .sectionHeading {
       @include grid-item;
+
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: .6rem;
+      gap: 0.6rem;
       margin: 3rem 0;
+
       &::after {
         content: "";
-        height: .6rem;
+        height: 0.6rem;
         width: 2.4rem;
         border-bottom: 1px solid $primary-color;
       }
 
       @media screen and (min-width: 768px) {
         font-size: 3rem;
+
         &::after {
-        width: 4.8rem;
-      }
+          width: 4.8rem;
+        }
       }
     }
 
     .cards {
       @include grid-item;
+
       display: flex;
       flex-wrap: wrap;
       gap: 2.4rem;
       justify-content: space-between;
-      
+
       .card {
         display: flex;
         gap: 1.2rem;
@@ -268,7 +271,7 @@
           @media screen and (min-width: 768px) {
             width: 25%;
           }
-          
+
           .checkers {
             fill: lighten($black, 5%);
             width: 10rem;
@@ -277,19 +280,18 @@
             top: -2rem;
             left: -1rem;
           }
-          
+
           img {
             width: 100%;
             position: relative;
           }
-
         }
-        
+
         .profile {
           flex: 1;
           display: flex;
           flex-direction: column;
-          gap: .6rem;
+          gap: 0.6rem;
           position: relative;
 
           h3 {
@@ -311,7 +313,7 @@
             top: -1.2rem;
           }
 
-          p{
+          p {
             font-size: 1rem;
             margin-top: 2rem;
             position: relative;
@@ -332,11 +334,11 @@
           }
         }
       }
-
     }
-    
+
     button {
       @include grid-item;
+
       border: 2px solid $grey;
       background-color: $white;
       color: $ash;
@@ -366,39 +368,43 @@
   @media screen and (min-width: 768px) {
     .partners {
       @include nested-grid;
+
       padding: 3rem;
 
       .container {
         @include grid-item;
+
         width: 100%;
       }
+
       .sectionHeading {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: .6rem;
+        gap: 0.6rem;
         font-size: 2.4rem;
         color: gray;
-        
 
         &::after {
           content: "";
-          height: .6rem;
+          height: 0.6rem;
           width: 2.4rem;
           border-bottom: 1px solid $primary-color;
         }
       }
     }
-    
-    footer{
+
+    footer {
       @include nested-grid;
+
       .container {
         @include grid-item;
+
         width: 100%;
       }
     }
   }
-  
+
   .about {
     display: none;
   }
@@ -428,6 +434,7 @@
 
     .card {
       padding-bottom: 3.6rem;
+
       @media screen and (min-width: 768px) {
         border: 1px solid red;
         max-width: auto;
@@ -437,14 +444,13 @@
           text-align: center;
           display: inline-block;
         }
-        
       }
 
       h3 {
         text-align: center;
         padding-bottom: 1.2rem;
       }
-  
+
       h1 {
         // text-align: center;
         width: 100%;
@@ -456,10 +462,10 @@
         justify-content: center;
 
         .line3 {
-          padding-left: .6rem;
+          padding-left: 0.6rem;
           margin-bottom: 2.4rem;
         }
-        
+
         @media screen and (min-width: 768px) {
           &::after {
             content: '';
@@ -494,16 +500,12 @@
           right: -2.4rem;
           transform: translateZ(-10px);
         }
-
       }
 
       .email {
         color: $black;
       }
-      
     }
-
-    
   }
 
   h5 {
@@ -516,11 +518,13 @@
 
   .logo {
     @include nested-grid;
+
     border-bottom: 2px solid $grey;
     // position: static;
 
     .container {
       @include grid-item;
+
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -530,17 +534,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: .6rem;
+        gap: 0.6rem;
         font-size: 2.4rem;
 
         &::after {
           content: "";
-          height: .6rem;
+          height: 0.6rem;
           width: 2.4rem;
           border-bottom: 1px solid $primary-color;
         }
       }
-      
+
       h5 {
         text-align: center;
         padding: 1.2rem;
@@ -571,56 +575,53 @@
 
           .red {
             color: $primary-color;
-            }
           }
+        }
 
-          svg {
-            width: 5rem;
-            fill: $ash;
-            filter: drop-shadow(2px -1.5px 0 $primary-color);
-          }
+        svg {
+          width: 5rem;
+          fill: $ash;
+          filter: drop-shadow(2px -1.5px 0 $primary-color);
+        }
       }
-      
-        .concertBox1 {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 0.6rem;
-          color: $white;
-          font-size: 2.4rem;
-          margin: 2.4rem 0;
-          padding: 5rem 3rem;
-          background: linear-gradient(transparentize($primary-color, .2), transparentize($primary-color, .2)), url('https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg');
-          background-size: cover;
 
-          h6 {
-            font-size: 1.4rem;
-          }
+      .concertBox1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        color: $white;
+        font-size: 2.4rem;
+        margin: 2.4rem 0;
+        padding: 5rem 3rem;
+        background: linear-gradient(transparentize($primary-color, 0.2), transparentize($primary-color, 0.2)), url('https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg');
+        background-size: cover;
+
+        h6 {
+          font-size: 1.4rem;
         }
+      }
 
-        .concertBox2 {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 0.6rem;
-          color: $white;
-          font-size: 2.4rem;
-          margin: 2.4rem 0;
-          padding: 5rem 3rem;
-          background: linear-gradient(transparentize($primary-color, .2), transparentize($primary-color, .2)), url('https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg');
-          background-size: cover;
+      .concertBox2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        color: $white;
+        font-size: 2.4rem;
+        margin: 2.4rem 0;
+        padding: 5rem 3rem;
+        background: linear-gradient(transparentize($primary-color, 0.2), transparentize($primary-color, 0.2)), url('https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg');
+        background-size: cover;
 
-          h6 {
-            font-size: 1.4rem;
-          }
+        h6 {
+          font-size: 1.4rem;
         }
-      
+      }
     }
   }
-
-  
 
   @media screen and (min-width: 768px) {
     .partners {
@@ -630,17 +631,21 @@
     footer {
       color: $grey-light;
       background-color: $ash;
+
       .container {
         background-color: $ash;
         padding: 3rem;
         font-size: 1.8rem;
+
         .logoBox {
           font-size: 2rem;
+
           .logoText {
             h6 {
               font-size: 1.7rem;
             }
           }
+
           svg {
             fill: $grey-light;
           }
@@ -686,7 +691,8 @@
       color: darken($grey, 10%);
     }
 
-    .bold, .bolder {
+    .bold,
+    .bolder {
       font-size: 1.6rem;
       color: gray;
       font-weight: 600;
@@ -701,6 +707,7 @@
 footer {
   .container {
     @include grid-item;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -719,9 +726,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
       }
-      
+
       h6 {
         font-weight: 700;
         font-size: 1rem;
@@ -738,18 +744,20 @@ footer {
     .container {
       padding: 3rem;
       font-size: 1.8rem;
+
       .logoBox {
         font-size: 2rem;
+
         .logoText {
           h6 {
             font-size: 1.7rem;
           }
         }
+
         svg {
           width: 4rem;
         }
       }
     }
-    
   }
 }
