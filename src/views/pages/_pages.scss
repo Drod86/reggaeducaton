@@ -8,7 +8,258 @@
   width: 100%;
 }
 
-.home {
+.aboutPage {
+  .hero {
+    @include hero;
+
+    .checkers {
+      border-radius: 5rem;
+      fill: $primary-color;
+      clip-path: circle(10px);
+      left: 4.8rem;
+      top: 2.4rem;
+    }
+
+    .headset {
+      fill: $black;
+      // position: relative;
+      top: 7.5rem;
+      left: auto;
+      right: 10.5rem;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    .card {
+      padding-bottom: 3.6rem;
+
+      @media screen and (min-width: 768px) {
+        border: 1px solid red;
+        max-width: auto;
+        // margin: 0;
+
+        h1 {
+          text-align: center;
+          display: inline-block;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        padding-bottom: 1.2rem;
+      }
+
+      h1 {
+        // text-align: center;
+        width: 100%;
+        color: $primary-color;
+        z-index: 2;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .line3 {
+          padding-left: 0.6rem;
+          margin-bottom: 2.4rem;
+        }
+
+        @media screen and (min-width: 768px) {
+          &::after {
+            content: '';
+            width: 3rem;
+            height: 2.4rem;
+            border-bottom: 1px solid $primary-color;
+            // margin:auto;
+          }
+        }
+      }
+
+      p {
+        border: 2px solid $grey;
+        background-color: $white;
+        position: relative;
+        transform-style: preserve-3d;
+        text-align: center;
+
+        .dial {
+          left: 1.2rem;
+        }
+
+        .microphone-alt {
+          top: -9.6rem;
+          left: 0;
+        }
+
+        .record-vinyl {
+          position: absolute;
+          width: 4.8rem;
+          top: -2.4rem;
+          right: -2.4rem;
+          transform: translateZ(-10px);
+        }
+      }
+
+      .email {
+        color: $black;
+      }
+    }
+  }
+
+  h5 {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .logo {
+    @include nested-grid;
+
+    border-bottom: 2px solid $grey;
+    // position: static;
+
+    .container {
+      @include grid-item;
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 2.4rem 0;
+
+      .sectionHeading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 2.4rem;
+
+        &::after {
+          content: "";
+          height: 0.6rem;
+          width: 2.4rem;
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+
+      h5 {
+        text-align: center;
+        padding: 1.2rem;
+        color: $ash;
+        // width: 5rem;
+        // display: none;
+      }
+
+
+
+      .concertBox1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        color: $white;
+        font-size: 2.4rem;
+        margin: 2.4rem 0;
+        padding: 5rem 3rem;
+        background: linear-gradient(transparentize($primary-color, 0.2), transparentize($primary-color, 0.2)), url('https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg');
+        background-size: cover;
+
+        h6 {
+          font-size: 1.4rem;
+        }
+      }
+
+      .concertBox2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        color: $white;
+        font-size: 2.4rem;
+        margin: 2.4rem 0;
+        padding: 5rem 3rem;
+        background: linear-gradient(transparentize($primary-color, 0.2), transparentize($primary-color, 0.2)), url('https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg');
+        background-size: cover;
+
+        h6 {
+          font-size: 1.4rem;
+        }
+      }
+
+      .logoBox {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 2.4rem;
+        border: 2px solid $grey;
+        justify-content: center;
+        margin: 2.4rem 0;
+        padding: 3rem;
+
+        .logoText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h6 {
+            font-weight: 700;
+            font-size: 2rem;
+          }
+
+          .red {
+            color: $primary-color;
+          }
+        }
+
+        svg {
+          width: 5rem;
+          fill: $ash;
+          filter: drop-shadow(2px -1.5px 0 $primary-color);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .partners {
+      display: none;
+    }
+
+    footer {
+      color: $grey-light;
+      background-color: $ash;
+
+      .container {
+        background-color: $ash;
+        padding: 3rem;
+        font-size: 1.8rem;
+
+        .logoBox {
+          font-size: 2rem;
+
+          .logoText {
+            h6 {
+              font-size: 1.7rem;
+            }
+          }
+
+          svg {
+            fill: $grey-light;
+          }
+        }
+      }
+    }
+  }
+
+  .home {
+    display: none;
+  }
+}
+
+.homePage {
   .hero {
     @include hero;
 
@@ -49,7 +300,6 @@
       }
 
       .headset {
-        width: 2.4rem;
         position: absolute;
         top: 4rem;
         left: auto;
@@ -264,7 +514,6 @@
 
         .portrait {
           position: relative;
-          width: max-content;
           padding: 1.2rem 0 0 1.2rem;
           width: 30%;
 
@@ -366,6 +615,16 @@
   }
 
   @media screen and (min-width: 768px) {
+    footer {
+      @include nested-grid;
+
+      .container {
+        @include grid-item;
+
+        width: 100%;
+      }
+    }
+
     .partners {
       @include nested-grid;
 
@@ -393,268 +652,9 @@
         }
       }
     }
-
-    footer {
-      @include nested-grid;
-
-      .container {
-        @include grid-item;
-
-        width: 100%;
-      }
-    }
   }
 
   .about {
-    display: none;
-  }
-}
-
-.about {
-  .hero {
-    @include hero;
-
-    .checkers {
-      border-radius: 5rem;
-      fill: $primary-color;
-      clip-path: circle(10px);
-      left: 4.8rem;
-      top: 2.4rem;
-    }
-
-    .headset {
-      fill: $black;
-      // position: relative;
-      top: 7.5rem;
-      left: auto;
-      right: 10.5rem;
-      transform: rotate(45deg);
-      z-index: 2;
-    }
-
-    .card {
-      padding-bottom: 3.6rem;
-
-      @media screen and (min-width: 768px) {
-        border: 1px solid red;
-        max-width: auto;
-        // margin: 0;
-
-        h1 {
-          text-align: center;
-          display: inline-block;
-        }
-      }
-
-      h3 {
-        text-align: center;
-        padding-bottom: 1.2rem;
-      }
-
-      h1 {
-        // text-align: center;
-        width: 100%;
-        color: $primary-color;
-        z-index: 2;
-        position: relative;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .line3 {
-          padding-left: 0.6rem;
-          margin-bottom: 2.4rem;
-        }
-
-        @media screen and (min-width: 768px) {
-          &::after {
-            content: '';
-            width: 3rem;
-            height: 2.4rem;
-            border-bottom: 1px solid $primary-color;
-            // margin:auto;
-          }
-        }
-      }
-
-      p {
-        border: 2px solid $grey;
-        background-color: $white;
-        position: relative;
-        transform-style: preserve-3d;
-        text-align: center;
-
-        .dial {
-          left: 1.2rem;
-        }
-
-        .microphone-alt {
-          top: -9.6rem;
-          left: 0;
-        }
-
-        .record-vinyl {
-          position: absolute;
-          width: 4.8rem;
-          top: -2.4rem;
-          right: -2.4rem;
-          transform: translateZ(-10px);
-        }
-      }
-
-      .email {
-        color: $black;
-      }
-    }
-  }
-
-  h5 {
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-  }
-
-  .logo {
-    @include nested-grid;
-
-    border-bottom: 2px solid $grey;
-    // position: static;
-
-    .container {
-      @include grid-item;
-
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 2.4rem 0;
-
-      .sectionHeading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.6rem;
-        font-size: 2.4rem;
-
-        &::after {
-          content: "";
-          height: 0.6rem;
-          width: 2.4rem;
-          border-bottom: 1px solid $primary-color;
-        }
-      }
-
-      h5 {
-        text-align: center;
-        padding: 1.2rem;
-        color: $ash;
-        // width: 5rem;
-        // display: none;
-      }
-
-      .logoBox {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        font-size: 2.4rem;
-        border: 2px solid $grey;
-        justify-content: center;
-        margin: 2.4rem 0;
-        padding: 3rem;
-
-        .logoText {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-
-          h6 {
-            font-weight: 700;
-            font-size: 2rem;
-          }
-
-          .red {
-            color: $primary-color;
-          }
-        }
-
-        svg {
-          width: 5rem;
-          fill: $ash;
-          filter: drop-shadow(2px -1.5px 0 $primary-color);
-        }
-      }
-
-      .concertBox1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.6rem;
-        color: $white;
-        font-size: 2.4rem;
-        margin: 2.4rem 0;
-        padding: 5rem 3rem;
-        background: linear-gradient(transparentize($primary-color, 0.2), transparentize($primary-color, 0.2)), url('https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg');
-        background-size: cover;
-
-        h6 {
-          font-size: 1.4rem;
-        }
-      }
-
-      .concertBox2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.6rem;
-        color: $white;
-        font-size: 2.4rem;
-        margin: 2.4rem 0;
-        padding: 5rem 3rem;
-        background: linear-gradient(transparentize($primary-color, 0.2), transparentize($primary-color, 0.2)), url('https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg');
-        background-size: cover;
-
-        h6 {
-          font-size: 1.4rem;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .partners {
-      display: none;
-    }
-
-    footer {
-      color: $grey-light;
-      background-color: $ash;
-
-      .container {
-        background-color: $ash;
-        padding: 3rem;
-        font-size: 1.8rem;
-
-        .logoBox {
-          font-size: 2rem;
-
-          .logoText {
-            h6 {
-              font-size: 1.7rem;
-            }
-          }
-
-          svg {
-            fill: $grey-light;
-          }
-        }
-      }
-    }
-  }
-
-  .home {
     display: none;
   }
 }

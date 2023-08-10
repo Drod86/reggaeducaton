@@ -108,6 +108,23 @@
   }
 }
 
+.mobileNav {
+  @include grid-item;
+
+  padding: 1.2rem 0;
+  z-index: 3000;
+
+  svg {
+    width: 2.8rem;
+    fill: $ash;
+    filter: drop-shadow(0 -0.75px 0 $ash);
+  }
+
+  @media screen and (min-width: 768px) {
+    @include hide;
+  }
+}
+
 .header {
   @include grid;
 
@@ -172,23 +189,6 @@
 
   .mainNav {
     @include mainNav();
-  }
-}
-
-.mobileNav {
-  @include grid-item;
-
-  padding: 1.2rem 0;
-  z-index: 3000;
-
-  svg {
-    width: 2.8rem;
-    fill: $ash;
-    filter: drop-shadow(0 -0.75px 0 $ash);
-  }
-
-  @media screen and (min-width: 768px) {
-    @include hide;
   }
 }
 
