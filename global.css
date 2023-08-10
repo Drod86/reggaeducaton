@@ -734,7 +734,7 @@
   grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
   width: 100vw;
   position: relative;
-  background-color: #f9f9f9;
+  background-image: url('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F556870729%2F1630479013993%2F1%2Foriginal.20230717-224003?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C410%2C828%2C414&s=0c927410f4bf96764e5eeecc9ddb71f4" width="100%');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -50vh;
@@ -935,7 +935,7 @@
   grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
   width: 100vw;
   width: 100vw;
-  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url("../../wave-square.svg");
+  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url("./wave-square.svg");
   background-size: 2.4rem 2.4rem;
   color: #fff;
 }

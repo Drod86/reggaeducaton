@@ -74,7 +74,7 @@ const router = () => {
   window.addEventListener('popstate', () => {
     const page = grab('#page');
     const pageName = window.location.hash.substring(1);
-    if (pageName.includes('home') || pageName.includes('about')) page.className = pageName + 'Page';
+    if (pageName.includes('home') || pageName.includes('about')) page.className = `${pageName}Page`;
   });
 };
 router();

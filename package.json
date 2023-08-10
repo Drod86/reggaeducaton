@@ -10,8 +10,7 @@
     }
   },
   "scripts": {
-    "start": "parcel",
-    "build": "rm -rf docs/ dist/ && parcel build --public-url='' && sed -i 's/%27%27/./g' ./docs/index.html"
+    "start": "live-server"
   },
   "keywords": [],
   "repository": {
@@ -27,13 +26,11 @@
     "lighthouse": "^10.2.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.9.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.28.0",
     "hint": "^7.1.10",
-    "parcel": "^2.9.3",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
