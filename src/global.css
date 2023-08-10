@@ -520,6 +520,49 @@
     font-size: 1.6rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .home .hero .checkers {
+    width: 10.5rem;
+    -webkit-clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+            clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+    transform: rotate(45deg);
+    top: auto;
+    bottom: 20rem;
+    left: auto;
+    right: 20vw;
+    position: absolute;
+  }
+  .home .hero .wave-square-1 {
+    width: 5rem;
+    position: absolute;
+    right: 4.8vw;
+    top: 30rem;
+  }
+  .home .hero .wave-square-2 {
+    position: absolute;
+    left: 5rem;
+    bottom: 20rem;
+    width: 4rem;
+    fill: #d3d3d3;
+  }
+  .home .hero .music-alt {
+    position: absolute;
+    top: 15rem;
+    right: 18vw;
+    bottom: auto;
+    fill: #d3d3d3;
+    width: 5rem;
+  }
+  .home .hero .headset {
+    width: 2.4rem;
+    position: absolute;
+    top: 4rem;
+    left: auto;
+    right: 40%;
+    width: 5rem;
+    transform: rotate(45deg);
+  }
+}
 .home .program {
   grid-column: full-start/full-end;
   display: grid;
@@ -766,8 +809,80 @@
     font-size: 1.3rem;
   }
 }
+.home .featured button {
+  grid-column: center-start/center-end;
+  border: 2px solid #d3d3d3;
+  background-color: #fff;
+  color: #474747;
+  font-weight: 700;
+  margin: 3rem 0;
+  padding: 1.2rem;
+}
+.home .featured button .red {
+  color: #ec5242;
+  transform: skew(20%, 50%);
+}
+@media screen and (min-width: 768px) {
+  .home .featured button {
+    visibility: hidden;
+  }
+}
+.home .partners {
+  display: none;
+}
 .home footer {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .home .partners {
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
+    width: 100vw;
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .home .partners {
+    grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
+  }
+}
+@media screen and (min-width: 768px) {
+  .home .partners .container {
+    grid-column: center-start/center-end;
+    width: 100%;
+  }
+  .home .partners .sectionHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 2.4rem;
+    color: gray;
+  }
+  .home .partners .sectionHeading::after {
+    content: "";
+    height: 0.6rem;
+    width: 2.4rem;
+    border-bottom: 1px solid #ec5242;
+  }
+  .home footer {
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .home footer {
+    grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
+  }
+}
+@media screen and (min-width: 768px) {
+  .home footer .container {
+    grid-column: center-start/center-end;
+    width: 100%;
+  }
 }
 .home .about {
   display: none;
@@ -951,6 +1066,16 @@
 .about .hero .card {
   padding-bottom: 3.6rem;
 }
+@media screen and (min-width: 768px) {
+  .about .hero .card {
+    border: 1px solid red;
+    max-width: auto;
+  }
+  .about .hero .card h1 {
+    text-align: center;
+    display: inline-block;
+  }
+}
 .about .hero .card h3 {
   text-align: center;
   padding-bottom: 1.2rem;
@@ -974,7 +1099,6 @@
     width: 3rem;
     height: 2.4rem;
     border-bottom: 1px solid #ec5242;
-    margin: auto;
   }
 }
 .about .hero .card p {
@@ -1108,6 +1232,24 @@
   .about .partners {
     display: none;
   }
+  .about footer {
+    color: #f9f9f9;
+    background-color: #474747;
+  }
+  .about footer .container {
+    background-color: #474747;
+    padding: 3rem;
+    font-size: 1.8rem;
+  }
+  .about footer .container .logoBox {
+    font-size: 2rem;
+  }
+  .about footer .container .logoBox .logoText h6 {
+    font-size: 1.7rem;
+  }
+  .about footer .container .logoBox svg {
+    fill: #f9f9f9;
+  }
 }
 .about .home {
   display: none;
@@ -1172,7 +1314,7 @@ footer .container .logoBox .logoText {
   flex-direction: column;
   justify-content: center;
 }
-footer .container .logoBox .logoText h6 {
+footer .container .logoBox h6 {
   font-weight: 700;
   font-size: 1rem;
 }
@@ -1181,12 +1323,7 @@ footer .container .logoBox svg {
   fill: #474747;
 }
 @media screen and (min-width: 768px) {
-  footer {
-    color: #f9f9f9;
-    background-color: #474747;
-  }
   footer .container {
-    background-color: #474747;
     padding: 3rem;
     font-size: 1.8rem;
   }
@@ -1198,7 +1335,6 @@ footer .container .logoBox svg {
   }
   footer .container .logoBox svg {
     width: 4rem;
-    fill: #f9f9f9;
   }
 }
 
