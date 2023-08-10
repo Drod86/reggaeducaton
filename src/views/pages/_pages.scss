@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../mixins';
+@import '../sections/hero';
 
 
 
@@ -10,193 +11,7 @@
 
 .home {
   .hero {
-    @include nested-grid;
-    position: relative;
-    background: url('https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F556870729%2F1630479013993%2F1%2Foriginal.20230717-224003?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C410%2C828%2C414&s=0c927410f4bf96764e5eeecc9ddb71f4');
-    background-color: $grey-light;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 -50vh;
-    
-
-    &::before {
-      content: '';
-      width: 100vw;
-      height: 100%;
-      // background: linear-gradient(to bottom, transparentize($grey-light, .5), 10%, $grey-light);
-      
-      background: linear-gradient(to bottom, transparentize($grey-light, .1), $grey-light, 55%, $grey-light);
-
-
-      // @include grid-item;
-      // z-index: 5000;
-      
-    }
-    
-
-    svg {
-      fill: lighten($grey, 5%);
-    }
-
-    .checkers {
-      width: 7rem;
-      clip-path: inset(2.1rem 3.15rem 1.75rem .7rem);
-      transform: rotate(45deg);
-      top: .6rem;
-      left: 60vw;
-      position: absolute;
-    }
-
-    .wave-square-1 {
-      width: 2.4rem;
-      position: absolute;
-      right: 4.8vw;
-      top: 4.8rem;
-    }
-
-    .wave-square-2 {
-      position: absolute;
-      left: 16vw;
-      bottom: 1.2rem;
-      // z-index: 7000;
-      fill: $grey;
-    }
-
-    .music-alt {
-      position: absolute;
-      right: 16vw;
-      bottom: 2.4rem;
-      // z-index: 7000; 
-      fill: $grey;
-    }
-
-    .headset {
-      width: 2.4rem;
-      position: absolute;
-      top: 4.8rem;
-      left: 18vw;
-    }
-    
-
-    .card {
-      @include grid-item;
-      margin-top: 14vh;
-      height: fit-content;
-      padding-bottom: 10vh;
-
-      
-
-      &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-      }
-
-      h3 {
-        font-weight: 500;
-        color: $primary-color;
-      }
-
-      h1 {
-        font-size: 3rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        display: flex;
-        flex-direction: column;
-        line-height: 3.2rem;
-        background: linear-gradient(to right, transparentize(red, 0), transparentize($primary-color, .9), transparentize($primary-color, 0)), url("https://festivaltips.dk/wp-content/uploads/2019/05/Festival-720x340.jpg");
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: rgba($primary-color, 0.5);
-        width: fit-content;
-        margin-bottom: 2.4rem;
-      }
-
-      p {
-        position: relative;
-        border: 3px solid $white;
-        background-color: $grey-light;
-        margin: 1.2rem 0;
-        padding: 1.2rem;
-        font-size: 1rem;
-        transform-style: preserve-3d;
-        line-height: 1.8rem;
-        font-weight: 600;
-        
-        .dial {
-          position: absolute;
-          top: -5rem;
-          right: 1.2rem;
-          width: 7.2rem;
-          fill: $ash;
-          transform: translateZ(-10px);
-          filter: drop-shadow(2px 2px 0 $primary-color);
-        }
-
-        .microphone-alt {
-          width: 3.6rem;
-          position: absolute;
-          top: -2.4rem;
-          left: 2.4rem;
-          transform: translateZ(-10px);
-        }
-      }
-
-      .dates {
-        color: $ash;
-        font-weight: 900;
-        margin-bottom: .6rem;
-        font-size: 2.2rem;
-      }
-
-      h5 {
-        color: $coal;
-        font-weight: 600;
-      }
-
-    }
-
-    @media screen and (min-width: 769px) {
-      height: 100vh;
-      font-size: 3rem;
-      background-position: 0 -80vh;
-      padding: 0;
-
-      .card {
-        max-width: 80%;
-        margin-top: 5%;
-        padding-bottom: 0;
-
-        h1{
-          font-size: 7rem;
-          line-height: 7rem
-        }
-
-        p {
-          max-width: 55rem;
-          font-size: 1.5rem;
-          line-height: 3rem;
-          margin-bottom: 2.4rem;
-
-          .dial {
-            width: 18rem;
-            top: -10rem;
-            right: -10rem;
-          }
-        }
-
-        .dates {
-          font-size: 3rem;
-          margin-bottom: 1.2rem;
-        }
-
-        h5 {
-          font-size: 1.6rem;
-        }
-      }
-    }
+    @include hero;
   }
 
   .program {
@@ -208,7 +23,7 @@
     // gap: 2.4rem;
     
 
-    h3 {
+    .sectionHeading {
       @include grid-item;
       display: flex;
       flex-direction: column;
@@ -354,6 +169,130 @@
       }
     }
   }
+
+  .featured {
+    @include grid;
+
+    .sectionHeading {
+      @include grid-item;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .6rem;
+      margin: 3rem 0;
+      &::after {
+        content: "";
+        height: .6rem;
+        width: 2.4rem;
+        border-bottom: 1px solid $primary-color;
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 3rem;
+        &::after {
+        width: 4.8rem;
+      }
+      }
+    }
+
+    .cards {
+      @include grid-item;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+      justify-content: space-between;
+      // display: none;
+
+      
+      .card {
+        display: flex;
+        gap: 1.2rem;
+        align-items: center;
+        height: fit-content;
+
+        @media screen and (min-width: 768px) {
+          max-width: 48%;
+        }
+
+        .portrait {
+          position: relative;
+          width: max-content;
+          padding: 1.2rem 0 0 1.2rem;
+          width: 30%;
+
+          @media screen and (min-width: 768px) {
+            width: 25%;
+          }
+          
+          .checkers {
+            fill: lighten($black, 5%);
+            width: 10rem;
+            clip-path: inset(2.07rem 3.56rem 2.56rem 1.05rem);
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+          }
+          
+          img {
+            width: 100%;
+            position: relative;
+          }
+
+        }
+        
+        .profile {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: .6rem;
+          position: relative;
+
+          h3 {
+            color: $black;
+            font-size: 1.4rem;
+          }
+
+          h5 {
+            color: $primary-color;
+            font-size: 1rem;
+          }
+
+          p::before {
+            content: '';
+            width: 2rem;
+            border-bottom: 1.5px solid $grey;
+            position: absolute;
+            left: 0;
+            top: -1.2rem;
+          }
+
+          p{
+            font-size: 1rem;
+            margin-top: 2rem;
+            position: relative;
+          }
+
+          @media screen and (min-width: 768px) {
+            h3 {
+              font-size: 2rem;
+            }
+
+            h5 {
+              font-size: 1.3rem;
+            }
+
+            p {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: none;
+  }
   
   .about {
     display: none;
@@ -361,8 +300,319 @@
 }
 
 .about {
-  @include grid-item;
+  .hero {
+    @include hero;
+
+    .checkers {
+      border-radius: 5rem;
+      fill: $primary-color;
+      clip-path: circle(10px);
+      left: 4.8rem;
+      top: 2.4rem;
+    }
+
+    .headset {
+      fill: $black;
+      // position: relative;
+      top: 7.5rem;
+      left: auto;
+      right: 10.5rem;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    .card {
+      padding-bottom: 3.6rem;
+      h3 {
+        text-align: center;
+        padding-bottom: 1.2rem;
+      }
+  
+      h1 {
+        // text-align: center;
+        width: 100%;
+        color: $primary-color;
+        z-index: 2;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .line3 {
+          padding-left: .6rem;
+          margin-bottom: 2.4rem;
+        }
+        
+        @media screen and (min-width: 768px) {
+          &::after {
+            content: '';
+            width: 3rem;
+            height: 2.4rem;
+            border-bottom: 1px solid $primary-color;
+            margin:auto;
+          }
+        }
+      }
+
+      p {
+        border: 2px solid $grey;
+        background-color: $white;
+        position: relative;
+        transform-style: preserve-3d;
+        text-align: center;
+
+        .dial {
+          left: 1.2rem;
+        }
+
+        .microphone-alt {
+          top: -9.6rem;
+          left: 0;
+        }
+
+        .record-vinyl {
+          position: absolute;
+          width: 4.8rem;
+          top: -2.4rem;
+          right: -2.4rem;
+          transform: translateZ(-10px);
+        }
+
+      }
+
+      .email {
+        color: $black;
+      }
+      
+    }
+  }
+
+  h5 {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .logo {
+    @include nested-grid;
+    border-bottom: 2px solid $grey;
+    // position: static;
+
+    .container {
+      @include grid-item;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 2.4rem 0;
+
+      .sectionHeading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .6rem;
+        font-size: 2.4rem;
+
+        &::after {
+          content: "";
+          height: .6rem;
+          width: 2.4rem;
+          border-bottom: 1px solid $primary-color;
+        }
+      }
+      
+      h5 {
+        text-align: center;
+        padding: 1.2rem;
+        color: $ash;
+        // width: 5rem;
+        // display: none;
+      }
+
+      .logoBox {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 2.4rem;
+        border: 2px solid $grey;
+        justify-content: center;
+        margin: 2.4rem 0;
+        padding: 3rem;
+
+        .logoText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h6 {
+            font-weight: 700;
+            font-size: 2rem;
+          }
+
+          .red {
+            color: $primary-color;
+            }
+          }
+
+          svg {
+            width: 5rem;
+            fill: $ash;
+            filter: drop-shadow(2px -1.5px 0 $primary-color);
+          }
+      }
+      
+        .concertBox1 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+          color: $white;
+          font-size: 2.4rem;
+          margin: 2.4rem 0;
+          padding: 5rem 3rem;
+          background: linear-gradient(transparentize($primary-color, .2), transparentize($primary-color, .2)), url('https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg');
+          background-size: cover;
+
+          h6 {
+            font-size: 1.4rem;
+          }
+        }
+
+        .concertBox2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+          color: $white;
+          font-size: 2.4rem;
+          margin: 2.4rem 0;
+          padding: 5rem 3rem;
+          background: linear-gradient(transparentize($primary-color, .2), transparentize($primary-color, .2)), url('https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg');
+          background-size: cover;
+
+          h6 {
+            font-size: 1.4rem;
+          }
+        }
+      
+    }
+  }
+
+  
+
+  @media screen and (min-width: 768px) {
+    .partners {
+      display: none;
+    }
+  }
+
   .home {
     display: none;
   }
 }
+
+.partners {
+    color: $white;
+    background-color: $ash;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+      padding: 0;
+      margin: 2.4rem 0;
+
+      .thick {
+        font-size: 3rem;
+        font-weight: 900;
+        color: $grey;
+      }
+
+      .grey {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+        color: gray;
+      }
+
+      .light {
+        font-size: 3rem;
+        font-weight: 600;
+        color: darken($grey, 10%);
+      }
+
+      .bold, .bolder {
+        font-size: 1.6rem;
+        color: gray;
+        font-weight: 600;
+      }
+
+      .bolder {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  footer {
+    .container {
+      @include grid-item;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.4rem;
+      padding: 1.5rem 3rem;
+
+      .logoBox {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1.2rem;
+        justify-content: center;
+        margin: 2.4rem 0;
+
+        .logoText {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h6 {
+            font-weight: 700;
+            font-size: 1rem;
+          }
+        }
+
+        svg {
+          width: 2.5rem;
+          fill: $ash;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      color: $grey-light;
+      background-color: $ash;
+      .container {
+        background-color: $ash;
+        padding: 3rem;
+        font-size: 1.8rem;
+        .logoBox {
+          font-size: 2rem;
+          .logoText {
+            h6 {
+              font-size: 1.7rem;
+            }
+          }
+          svg {
+            width: 4rem;
+            fill: $grey-light;
+          }
+        }
+      }
+      
+    }
+  }

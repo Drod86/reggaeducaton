@@ -1,9 +1,14 @@
 // import './global.scss';
 import router from './controllers/router.js';
-import { grab, onClick } from './utils/utils.js';
+import { grab, onClick, render } from './utils/utils.js';
+import db from './models/db.js';
 
-// Initial render of home
-// grab('.about').style.display = 'none';
+// Dynamically add featured artists
+import artistCard from './views/components/artistCard.js';
+const featuredCards = grab('.cards');
+const { artists } = db;
+const featuredArtists = artists.reduce((acc, artist) => acc + artistCard(artist), ``);
+render(featuredCards, featuredArtists);
 
 // Toggle mobile menu
 const menuBurger = grab('.menu-burger');

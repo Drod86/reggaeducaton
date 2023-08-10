@@ -367,7 +367,6 @@
   grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
   width: 100vw;
   position: relative;
-  background: url("https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F556870729%2F1630479013993%2F1%2Foriginal.20230717-224003?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C410%2C828%2C414&s=0c927410f4bf96764e5eeecc9ddb71f4");
   background-color: #f9f9f9;
   background-size: cover;
   background-repeat: no-repeat;
@@ -427,11 +426,6 @@
   height: fit-content;
   padding-bottom: 10vh;
 }
-.home .hero .card::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-}
 .home .hero .card h3 {
   font-weight: 500;
   color: #ec5242;
@@ -452,6 +446,7 @@
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 2.4rem;
+  transform-style: preserve-3d;
 }
 .home .hero .card p {
   position: relative;
@@ -540,7 +535,7 @@
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
 }
-.home .program h3 {
+.home .program .sectionHeading {
   grid-column: center-start/center-end;
   display: flex;
   flex-direction: column;
@@ -548,17 +543,17 @@
   gap: 0.6rem;
   margin: 3rem 0;
 }
-.home .program h3::after {
+.home .program .sectionHeading::after {
   content: "";
   height: 0.6rem;
   width: 2.4rem;
   border-bottom: 1px solid #ec5242;
 }
 @media screen and (min-width: 768px) {
-  .home .program h3 {
+  .home .program .sectionHeading {
     font-size: 3rem;
   }
-  .home .program h3::after {
+  .home .program .sectionHeading::after {
     width: 4.8rem;
   }
 }
@@ -656,15 +651,555 @@
     display: inline-block;
   }
 }
+.home .featured {
+  display: grid;
+  grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
+  width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .home .featured {
+    grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
+  }
+}
+.home .featured .sectionHeading {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 3rem 0;
+}
+.home .featured .sectionHeading::after {
+  content: "";
+  height: 0.6rem;
+  width: 2.4rem;
+  border-bottom: 1px solid #ec5242;
+}
+@media screen and (min-width: 768px) {
+  .home .featured .sectionHeading {
+    font-size: 3rem;
+  }
+  .home .featured .sectionHeading::after {
+    width: 4.8rem;
+  }
+}
+.home .featured .cards {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: space-between;
+}
+.home .featured .cards .card {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (min-width: 768px) {
+  .home .featured .cards .card {
+    max-width: 48%;
+  }
+}
+.home .featured .cards .card .portrait {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.2rem 0 0 1.2rem;
+  width: 30%;
+}
+@media screen and (min-width: 768px) {
+  .home .featured .cards .card .portrait {
+    width: 25%;
+  }
+}
+.home .featured .cards .card .portrait .checkers {
+  fill: #32363f;
+  width: 10rem;
+  -webkit-clip-path: inset(2.07rem 3.56rem 2.56rem 1.05rem);
+          clip-path: inset(2.07rem 3.56rem 2.56rem 1.05rem);
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+}
+.home .featured .cards .card .portrait img {
+  width: 100%;
+  position: relative;
+}
+.home .featured .cards .card .profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+}
+.home .featured .cards .card .profile h3 {
+  color: #272a31;
+  font-size: 1.4rem;
+}
+.home .featured .cards .card .profile h5 {
+  color: #ec5242;
+  font-size: 1rem;
+}
+.home .featured .cards .card .profile p::before {
+  content: "";
+  width: 2rem;
+  border-bottom: 1.5px solid #d3d3d3;
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+}
+.home .featured .cards .card .profile p {
+  font-size: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .home .featured .cards .card .profile h3 {
+    font-size: 2rem;
+  }
+  .home .featured .cards .card .profile h5 {
+    font-size: 1.3rem;
+  }
+  .home .featured .cards .card .profile p {
+    font-size: 1.3rem;
+  }
+}
+.home footer {
+  display: none;
+}
 .home .about {
   display: none;
 }
 
-.about {
+.about .hero {
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
+  width: 100vw;
+  position: relative;
+  background-color: #f9f9f9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -50vh;
+}
+@media screen and (min-width: 768px) {
+  .about .hero {
+    grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
+  }
+}
+.about .hero::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(249, 249, 249, 0.9), #f9f9f9, 55%, #f9f9f9);
+}
+.about .hero svg {
+  fill: #e0e0e0;
+}
+.about .hero .checkers {
+  width: 7rem;
+  -webkit-clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+          clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
+  transform: rotate(45deg);
+  top: 0.6rem;
+  left: 60vw;
+  position: absolute;
+}
+.about .hero .wave-square-1 {
+  width: 2.4rem;
+  position: absolute;
+  right: 4.8vw;
+  top: 4.8rem;
+}
+.about .hero .wave-square-2 {
+  position: absolute;
+  left: 16vw;
+  bottom: 1.2rem;
+  fill: #d3d3d3;
+}
+.about .hero .music-alt {
+  position: absolute;
+  right: 16vw;
+  bottom: 2.4rem;
+  fill: #d3d3d3;
+}
+.about .hero .headset {
+  width: 2.4rem;
+  position: absolute;
+  top: 4.8rem;
+  left: 18vw;
+}
+.about .hero .card {
   grid-column: center-start/center-end;
+  margin-top: 14vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 10vh;
+}
+.about .hero .card h3 {
+  font-weight: 500;
+  color: #ec5242;
+}
+.about .hero .card h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  line-height: 3.2rem;
+  background: linear-gradient(to right, red, rgba(236, 82, 66, 0.1), #ec5242), url("https://festivaltips.dk/wp-content/uploads/2019/05/Festival-720x340.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(236, 82, 66, 0.5);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 2.4rem;
+  transform-style: preserve-3d;
+}
+.about .hero .card p {
+  position: relative;
+  border: 3px solid #fff;
+  background-color: #f9f9f9;
+  margin: 1.2rem 0;
+  padding: 1.2rem;
+  font-size: 1rem;
+  transform-style: preserve-3d;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+.about .hero .card p .dial {
+  position: absolute;
+  top: -5rem;
+  right: 1.2rem;
+  width: 7.2rem;
+  fill: #474747;
+  transform: translateZ(-10px);
+  filter: drop-shadow(2px 2px 0 #ec5242);
+}
+.about .hero .card p .microphone-alt {
+  width: 3.6rem;
+  position: absolute;
+  top: -2.4rem;
+  left: 2.4rem;
+  transform: translateZ(-10px);
+}
+.about .hero .card .dates {
+  color: #474747;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  font-size: 2.2rem;
+}
+.about .hero .card h5 {
+  color: #6b7386;
+  font-weight: 600;
+}
+@media screen and (min-width: 769px) {
+  .about .hero {
+    height: 100vh;
+    font-size: 3rem;
+    background-position: 0 -80vh;
+    padding: 0;
+  }
+  .about .hero .card {
+    max-width: 80%;
+    margin-top: 5%;
+    padding-bottom: 0;
+  }
+  .about .hero .card h1 {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  .about .hero .card p {
+    max-width: 55rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: 2.4rem;
+  }
+  .about .hero .card p .dial {
+    width: 18rem;
+    top: -10rem;
+    right: -10rem;
+  }
+  .about .hero .card .dates {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+  }
+  .about .hero .card h5 {
+    font-size: 1.6rem;
+  }
+}
+.about .hero .checkers {
+  border-radius: 5rem;
+  fill: #ec5242;
+  -webkit-clip-path: circle(10px);
+          clip-path: circle(10px);
+  left: 4.8rem;
+  top: 2.4rem;
+}
+.about .hero .headset {
+  fill: #272a31;
+  top: 7.5rem;
+  left: auto;
+  right: 10.5rem;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+.about .hero .card {
+  padding-bottom: 3.6rem;
+}
+.about .hero .card h3 {
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+.about .hero .card h1 {
+  width: 100%;
+  color: #ec5242;
+  z-index: 2;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about .hero .card h1 .line3 {
+  padding-left: 0.6rem;
+  margin-bottom: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .about .hero .card h1::after {
+    content: "";
+    width: 3rem;
+    height: 2.4rem;
+    border-bottom: 1px solid #ec5242;
+    margin: auto;
+  }
+}
+.about .hero .card p {
+  border: 2px solid #d3d3d3;
+  background-color: #fff;
+  position: relative;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+.about .hero .card p .dial {
+  left: 1.2rem;
+}
+.about .hero .card p .microphone-alt {
+  top: -9.6rem;
+  left: 0;
+}
+.about .hero .card p .record-vinyl {
+  position: absolute;
+  width: 4.8rem;
+  top: -2.4rem;
+  right: -2.4rem;
+  transform: translateZ(-10px);
+}
+.about .hero .card .email {
+  color: #272a31;
+}
+.about h5 {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.about .logo {
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: [full-start] minmax(2.4rem, 5vw) [center-start] 1fr [center-end] minmax(2.4rem, 5vw) [full-end];
+  width: 100vw;
+  border-bottom: 2px solid #d3d3d3;
+}
+@media screen and (min-width: 768px) {
+  .about .logo {
+    grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
+  }
+}
+.about .logo .container {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2.4rem 0;
+}
+.about .logo .container .sectionHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 2.4rem;
+}
+.about .logo .container .sectionHeading::after {
+  content: "";
+  height: 0.6rem;
+  width: 2.4rem;
+  border-bottom: 1px solid #ec5242;
+}
+.about .logo .container h5 {
+  text-align: center;
+  padding: 1.2rem;
+  color: #474747;
+}
+.about .logo .container .logoBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 2.4rem;
+  border: 2px solid #d3d3d3;
+  justify-content: center;
+  margin: 2.4rem 0;
+  padding: 3rem;
+}
+.about .logo .container .logoBox .logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .logo .container .logoBox .logoText h6 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.about .logo .container .logoBox .logoText .red {
+  color: #ec5242;
+}
+.about .logo .container .logoBox svg {
+  width: 5rem;
+  fill: #474747;
+  filter: drop-shadow(2px -1.5px 0 #ec5242);
+}
+.about .logo .container .concertBox1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 2.4rem 0;
+  padding: 5rem 3rem;
+  background: linear-gradient(rgba(236, 82, 66, 0.8), rgba(236, 82, 66, 0.8)), url("https://storage.googleapis.com/media.discodonniepresents.com/2022/06/f51f23e2-2022-0424-sanjuan-ventanadelmar-ren80studios-processed-087-400x225.jpg");
+  background-size: cover;
+}
+.about .logo .container .concertBox1 h6 {
+  font-size: 1.4rem;
+}
+.about .logo .container .concertBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 2.4rem 0;
+  padding: 5rem 3rem;
+  background: linear-gradient(rgba(236, 82, 66, 0.8), rgba(236, 82, 66, 0.8)), url("https://www.criptonoticias.com/wp-content/uploads/2018/10/red-bull-chile-criptomonedas-cryptomarket.jpg");
+  background-size: cover;
+}
+.about .logo .container .concertBox2 h6 {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .about .partners {
+    display: none;
+  }
 }
 .about .home {
   display: none;
+}
+
+.partners {
+  color: #fff;
+  background-color: #474747;
+}
+.partners ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  padding: 0;
+  margin: 2.4rem 0;
+}
+.partners ul .thick {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #d3d3d3;
+}
+.partners ul .grey {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  color: gray;
+}
+.partners ul .light {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #bababa;
+}
+.partners ul .bold, .partners ul .bolder {
+  font-size: 1.6rem;
+  color: gray;
+  font-weight: 600;
+}
+.partners ul .bolder {
+  font-size: 1.8rem;
+}
+
+footer .container {
+  grid-column: center-start/center-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 1.5rem 3rem;
+}
+footer .container .logoBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin: 2.4rem 0;
+}
+footer .container .logoBox .logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .container .logoBox .logoText h6 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+footer .container .logoBox svg {
+  width: 2.5rem;
+  fill: #474747;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    color: #f9f9f9;
+    background-color: #474747;
+  }
+  footer .container {
+    background-color: #474747;
+    padding: 3rem;
+    font-size: 1.8rem;
+  }
+  footer .container .logoBox {
+    font-size: 2rem;
+  }
+  footer .container .logoBox .logoText h6 {
+    font-size: 1.7rem;
+  }
+  footer .container .logoBox svg {
+    width: 4rem;
+    fill: #f9f9f9;
+  }
 }
 
 /* Global Styles */

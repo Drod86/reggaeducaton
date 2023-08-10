@@ -1,0 +1,172 @@
+@import '../variables';
+@import '../mixins';
+
+@mixin hero {
+    @include nested-grid;
+    position: relative;
+    background-color: $grey-light;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -50vh;
+    
+    &::before {
+      content: '';
+      width: 100vw;
+      height: 100%;
+      background: linear-gradient(to bottom, transparentize($grey-light, .1), $grey-light, 55%, $grey-light);
+    }
+    
+    svg {
+      fill: lighten($grey, 5%);
+    }
+
+    .checkers {
+      width: 7rem;
+      clip-path: inset(2.1rem 3.15rem 1.75rem .7rem);
+      transform: rotate(45deg);
+      top: .6rem;
+      left: 60vw;
+      position: absolute;
+    }
+
+    .wave-square-1 {
+      width: 2.4rem;
+      position: absolute;
+      right: 4.8vw;
+      top: 4.8rem;
+    }
+
+    .wave-square-2 {
+      position: absolute;
+      left: 16vw;
+      bottom: 1.2rem;
+      fill: $grey;
+    }
+
+    .music-alt {
+      position: absolute;
+      right: 16vw;
+      bottom: 2.4rem;
+      fill: $grey;
+    }
+
+    .headset {
+      width: 2.4rem;
+      position: absolute;
+      top: 4.8rem;
+      left: 18vw;
+    }
+    
+    .card {
+      @include grid-item;
+      margin-top: 14vh;
+      height: fit-content;
+      padding-bottom: 10vh;
+
+      h3 {
+        font-weight: 500;
+        color: $primary-color;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        line-height: 3.2rem;
+        background: linear-gradient(to right, transparentize(red, 0), transparentize($primary-color, .9), transparentize($primary-color, 0)), url("https://festivaltips.dk/wp-content/uploads/2019/05/Festival-720x340.jpg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba($primary-color, 0.5);
+        width: fit-content;
+        margin-bottom: 2.4rem;
+        transform-style: preserve-3d;
+      }
+
+      p {
+        position: relative;
+        border: 3px solid $white;
+        background-color: $grey-light;
+        margin: 1.2rem 0;
+        padding: 1.2rem;
+        font-size: 1rem;
+        transform-style: preserve-3d;
+        line-height: 1.8rem;
+        font-weight: 600;
+        
+        .dial {
+          position: absolute;
+          top: -5rem;
+          right: 1.2rem;
+          width: 7.2rem;
+          fill: $ash;
+          transform: translateZ(-10px);
+          filter: drop-shadow(2px 2px 0 $primary-color);
+        }
+
+        .microphone-alt {
+          width: 3.6rem;
+          position: absolute;
+          top: -2.4rem;
+          left: 2.4rem;
+          transform: translateZ(-10px);
+        }
+      }
+
+      .dates {
+        color: $ash;
+        font-weight: 900;
+        margin-bottom: .6rem;
+        font-size: 2.2rem;
+      }
+
+      h5 {
+        color: $coal;
+        font-weight: 600;
+      }
+
+    }
+
+    @media screen and (min-width: 769px) {
+      height: 100vh;
+      font-size: 3rem;
+      background-position: 0 -80vh;
+      padding: 0;
+
+      .card {
+        max-width: 80%;
+        margin-top: 5%;
+        padding-bottom: 0;
+
+        h1{
+          font-size: 7rem;
+          line-height: 7rem
+        }
+
+        p {
+          max-width: 55rem;
+          font-size: 1.5rem;
+          line-height: 3rem;
+          margin-bottom: 2.4rem;
+
+          .dial {
+            width: 18rem;
+            top: -10rem;
+            right: -10rem;
+          }
+        }
+
+        .dates {
+          font-size: 3rem;
+          margin-bottom: 1.2rem;
+        }
+
+        h5 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
