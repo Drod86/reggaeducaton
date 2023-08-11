@@ -93,12 +93,15 @@ const logo = grab('.logoBox');
 const mainNavItems = Object.values(grab('.main').children);
 const getTicket = grab('.getTicket');
 const header = grab('header');
-const toggleMenu = () => {
+const toggleMenu = (e) => {
   const { className } = header;
-  if (className === 'header') {
-    header.className = 'openNav';
-  } else {
+
+  if (className === 'openNav') {
     header.className = 'header';
+  }
+
+  if (className === 'header' && e.target.classList[0] === 'menu-burger') {
+    header.className = 'openNav';
   }
 };
 
@@ -119,4 +122,5 @@ const router = () => {
     });
   });
 };
+
 router();

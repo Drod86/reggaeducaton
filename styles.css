@@ -553,7 +553,7 @@ footer .container .logoBox .logoText {
   text-transform: uppercase;
   display: flex;
   line-height: 3.2rem;
-  background: linear-gradient(to right, red, rgba(236, 82, 66, 0.1), #ec5242), url("https://festivaltips.dk/wp-content/uploads/2019/05/Festival-720x340.jpg");
+  background: linear-gradient(to right, red, rgba(236, 82, 66, 0.1), #ec5242), url("https://festivaltips.dk/wp-content/ uploads/2019/05/Festival-720x340.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-clip: text;
