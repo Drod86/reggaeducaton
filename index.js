@@ -16,10 +16,10 @@ const db = {
   artists: [
     artistData('Ivy Queen', ['Quiero Bailar', 'CELEBRANDO', 'Quiero Saber'], 'Ivy Queen is Reggaeton royalty, her empowering lyrics and electrifying beats have left an indelible mark on the music scene. A true trailblazer inspiring a global wave of fans.', 'https://i.pinimg.com/474x/8a/b0/5d/8ab05d648464d4023039ff23fe988998.jpg'),
     artistData('Daddy Yankee', ['Con Calma', 'Dura', 'Gasolina'], "Daddy Yankee: The reggaeton icon who ignited the genre's explosion with his irresistible beats and influential style. A trailblazer whose music continues to set dance floors ablaze and inspire fans around the globe.", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIut3_uFlFlHyefmX05o9H3E-WRHMbKskUKdBwxHRitZZxNnWvnqjuFPX3ZKmTEpcZx7VK&s'),
-    artistData('Nicky Jam', ["Hasta el Amanecer", "El Perdón (with Enrique Iglesias)", "X (with J Balvin)"], 'A reggaeton sensation who has conquered hearts with his captivating melodies and magnetic stage presence. His music resonates worldwide, uniting cultures and sparking a rhythmic revolution.', 'https://i.scdn.co/image/ab67616100005174f9301ee82e1eee3128eff931'),
-    artistData('Tego Calderon', ["Pa' Que Retozen", "Metele Sazon", "Dando Break"], 'A reggaeton pioneer known for his distinctive sound and socially conscious lyrics.', 'https://yt3.googleusercontent.com/kLvlPYWMrnvQVW6ObEtgjL5m5aZwBXaXTeGX6cxIOIV12iobB-kdfouBoXqIfsTH1tXcH-0mXg=s900-c-k-c0x00ffffff-no-rj'),
-    artistData('Carol G', ["Bichota", "Tusa (with Nicki Minaj)", "Ay, DiOs Mío!"], 'A rising reggaeton star celebrated for her dynamic vocals and empowering presence.', 'https://remezcla.com/wp-content/uploads/2023/07/header-GettyImages-1529560337-1424x1068.jpg'),
-    artistData('Bad Bunny', ["Dákiti (with Jhay Cortez)", "Vete", "Mía (with Drake)"], "A genre-defying phenomenon who's reshaped Latin music with his genre-blending creativity and chart-topping hits.", 'https://yt3.googleusercontent.com/7tCfeCWH4arhsTM-4Rz4IxWieQbegzibeXlG-kbytAujdk5dr2K0gBb8NG0Cvk6lB1dPkjyd=s900-c-k-c0x00ffffff-no-rj'),
+    artistData('Nicky Jam', ['Hasta el Amanecer', 'El Perdón (with Enrique Iglesias)', 'X (with J Balvin)'], 'A reggaeton sensation who has conquered hearts with his captivating melodies and magnetic stage presence. His music resonates worldwide, uniting cultures and sparking a rhythmic revolution.', 'https://i.scdn.co/image/ab67616100005174f9301ee82e1eee3128eff931'),
+    artistData('Tego Calderon', ["Pa' Que Retozen", 'Metele Sazon', 'Dando Break'], 'A reggaeton pioneer known for his distinctive sound and socially conscious lyrics.', 'https://yt3.googleusercontent.com/kLvlPYWMrnvQVW6ObEtgjL5m5aZwBXaXTeGX6cxIOIV12iobB-kdfouBoXqIfsTH1tXcH-0mXg=s900-c-k-c0x00ffffff-no-rj'),
+    artistData('Carol G', ['Bichota', 'Tusa (with Nicki Minaj)', 'Ay, DiOs Mío!'], 'A rising reggaeton star celebrated for her dynamic vocals and empowering presence.', 'https://remezcla.com/wp-content/uploads/2023/07/header-GettyImages-1529560337-1424x1068.jpg'),
+    artistData('Bad Bunny', ['Dákiti (with Jhay Cortez)', 'Vete', 'Mía (with Drake)'], "A genre-defying phenomenon who's reshaped Latin music with his genre-blending creativity and chart-topping hits.", 'https://yt3.googleusercontent.com/7tCfeCWH4arhsTM-4Rz4IxWieQbegzibeXlG-kbytAujdk5dr2K0gBb8NG0Cvk6lB1dPkjyd=s900-c-k-c0x00ffffff-no-rj'),
   ],
 };
 
@@ -75,15 +75,13 @@ const renderMobileCards = () => {
     visibleCards[0] += 2;
     visibleCards[1] += 2;
   }
-  console.log(artistCards,
-  visibleCards[0])
-}
+};
 
 renderMobileCards();
 
 // activate button to cicle through featured artists on mobile version
 const moreArtists = grab('.more');
-onClick(moreArtists, renderMobileCards)
+onClick(moreArtists, renderMobileCards);
 
 // Toggle mobile menu
 const menuBurger = grab('.menu-burger');
@@ -105,14 +103,13 @@ const router = () => {
     const mainNavItems = Object.values(grab('.main').children);
     const pageName = window.location.hash.substring(1);
     if (pageName.includes('home') || pageName.includes('about')) page.className = `${pageName}Page`;
-    mainNavItems.forEach(item => {
+    mainNavItems.forEach((item) => {
       if (item.innerText.toLowerCase() === pageName) {
         item.classList.add('current');
       } else {
         item.classList.remove('current');
       }
-    })
-    console.log(mainNavItems);
+    });
   });
 };
 router();
