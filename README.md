@@ -52,13 +52,13 @@ This is a website for a Reggaeton concert tour.
 ### Key Features <a name="key-features"></a>
 
 - **Feature Performers**
-- **About Beneficiaries**
+- **About the Cause**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [See Live Demo](https://drod86.github.io/[repo-name])
+- [See Live Demo](https://drod86.github.io/reggaeducaton)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
