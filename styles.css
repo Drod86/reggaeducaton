@@ -105,7 +105,6 @@ svg {
 
 .mobileNav {
   grid-column: center-start/center-end;
-  padding: 1.2rem 0;
   z-index: 3000;
 }
 
@@ -139,7 +138,6 @@ svg {
   justify-content: flex-end;
   align-items: center;
   gap: 2.4rem;
-  padding: 0.6rem 0;
 }
 
 .header .topNav .item {
@@ -159,6 +157,11 @@ svg {
 .openNav .mobileNav svg {
   fill: #fff;
   filter: drop-shadow(0 -0.75px 0 #fff);
+}
+
+.openNav .mobileNav svg:hover {
+  fill: #dedede;
+  filter: drop-shadow(0 -0.75px 0 #dedede);
 }
 
 .homePage .hero svg {
@@ -213,6 +216,8 @@ footer .container .logoBox .logoText {
 .aboutPage .hero .card h5 {
   color: #6b7386;
   font-weight: 600;
+  text-align: center;
+  padding-top: 1.2rem;
 }
 
 .aboutPage .logo .container h5 {
@@ -255,9 +260,20 @@ footer .container .logoBox .logoText {
 }
 
 .openNav .topNav .item {
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
+}
+
+.openNav .topNav .current {
+  color:#ec5242;
+}
+
+.openNav .topNav .item:active {
+  color:#ec5242;
+}
+
+.openNav .topNav .item:active svg{
+  fill:#ec5242;
 }
 
 .header .mainNav .main .item {
@@ -270,6 +286,14 @@ footer .container .logoBox .logoText {
   background-color: #fff;
   border: 5px solid #ec5242;
   color: #ec5242;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header .mainNav .getTicket:active {
+  color: #fff;
+  border: 5px solid #ec5242;
+  background-color:rgba(236, 82, 66, 0.8);
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -380,6 +404,11 @@ footer .container .logoBox .logoText {
   font-weight: 700;
 }
 
+.openNav .mainNav .getTicket:active {
+  background-color:rgba(236, 82, 66, 0.8);
+  color: #fff;
+}
+
 .openNav .mainNav .main li {
   width: 100%;
   padding: 1.2rem;
@@ -390,6 +419,18 @@ footer .container .logoBox .logoText {
   flex: 1;
 }
 
+.openNav .mainNav .main li:active {
+  width: 100%;
+  padding: .7rem;
+  font-weight: 600;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: #ec5242;
+  flex: 1;
+  border: 5px solid #ec5242;
+  background-color: #fff;
+}
+
 .openNav .mainNav button {
   width: 100%;
   padding: 1.2rem;
@@ -397,7 +438,7 @@ footer .container .logoBox .logoText {
 
 .openNav .mobileNav {
   width: 100vw;
-  padding: 1.2rem;
+  padding: 2.4rem 0 1.2rem;
   display: flex;
   justify-content: center;
   background-color: #ec5242;
@@ -481,8 +522,6 @@ footer .container .logoBox .logoText {
   margin-top: 14vh;
   height: -moz-fit-content;
   height: fit-content;
-
-  /* padding-bottom: 10vh; */
   padding-bottom: 3.6rem;
 }
 
@@ -504,7 +543,7 @@ footer .container .logoBox .logoText {
   background-repeat: no-repeat;
   background-clip: text;
   -webkit-background-clip: text;
-  margin-bottom: 2.4rem;
+  margin: 0 auto 2.4rem;
   transform-style: preserve-3d;
   width: 100%;
   color: #ec5242;
@@ -513,6 +552,7 @@ footer .container .logoBox .logoText {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 45rem;
 }
 
 .aboutPage .hero .card p {
@@ -538,12 +578,14 @@ footer .container .logoBox .logoText {
   filter: drop-shadow(2px 2px 0 #ec5242);
 }
 
-.aboutPage .hero .card p .microphone-alt {
+.aboutPage .hero .card h1 .microphone-alt {
   width: 3.6rem;
   position: absolute;
   transform: translateZ(-10px);
-  top: -9.6rem;
-  left: 0;
+  top: 1.2rem;
+  left: 10vw;
+  fill: #d3d3d3;
+  transform: translate3d(-10px);
 }
 
 .aboutPage .hero .card .dates {
@@ -826,11 +868,11 @@ footer .container {
   filter: drop-shadow(2px 2px 0 #ec5242);
 }
 
-.homePage .hero .card p .microphone-alt {
+.homePage .hero .card h1 .microphone-alt {
   width: 3.6rem;
   position: absolute;
   top: -2.4rem;
-  left: 2.4rem;
+  left: -6rem;
   transform: translateZ(-10px);
 }
 
@@ -930,6 +972,16 @@ footer .container {
   font-size: 2rem;
 }
 
+.homePage .program .join:active {
+  grid-column: center-start/center-end;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  color: #ec5242;
+  background-color: #fff;
+  border: 2px solid #ec5242;
+  font-size: 2rem;
+}
+
 .homePage .program .also {
   grid-column: center-start/center-end;
   text-align: center;
@@ -950,7 +1002,10 @@ footer .container {
   flex-wrap: wrap;
   gap: 2.4rem;
   justify-content: space-between;
+  height: fit-content;
 }
+
+
 
 .homePage .featured .cards .card {
   display: flex;
@@ -958,6 +1013,10 @@ footer .container {
   align-items: center;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.homePage .featured .cards .hide {
+  display: none;
 }
 
 .homePage .featured .cards .card .portrait {
@@ -1019,6 +1078,16 @@ footer .container {
   border: 2px solid #d3d3d3;
   background-color: #fff;
   color: #474747;
+  font-weight: 700;
+  margin: 3rem 0;
+  padding: 1.2rem;
+}
+
+.homePage .featured button:active {
+  grid-column: center-start/center-end;
+  border: 2px solid #ec5242;
+  background-color: #fff;
+  color: #ec5242;
   font-weight: 700;
   margin: 3rem 0;
   padding: 1.2rem;
@@ -1184,12 +1253,45 @@ footer .container {
 @media screen and (min-width: 768px) {
   .header .topNav {
     display: grid;
+    padding: .6rem 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .header .mainNav {
     display: flex;
+  }
+
+  .header .mainNav .main .current {
+    color:#ec5242;
+  }
+
+  .header .mainNav .getTicket:hover {
+    color: #fff;
+    border: 5px solid #ec5242;
+    background-color:rgba(236, 82, 66, 0.9); 
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .header .mainNav .getTicket:active {
+    color: #ec5242;
+    border: 5px solid #d3d3d3;
+    background-color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .header .topNav .item:hover {
+    color: #ec5242;
+  }
+
+  .header .topNav .item svg:hover {
+    fill: #ec5242;
+  }
+
+  .header .mainNav .item:hover {
+    color: #ec5242;
   }
 }
 
@@ -1228,7 +1330,7 @@ footer .container {
   .aboutPage .hero .card {
     margin-top: 5%;
     padding-bottom: 0;
-    border: 1px solid red;
+    align-items: center;
   }
 
   .aboutPage .hero .card h1 {
@@ -1236,27 +1338,43 @@ footer .container {
     line-height: 7rem;
     text-align: center;
     display: inline-block;
+    max-width: 100%;
   }
 
   .aboutPage .hero .card h1::after {
     content: "";
-    width: 3rem;
+    width: 6rem;
     height: 2.4rem;
     border-bottom: 1px solid #ec5242;
+    position: absolute;
+    bottom: -2.4rem;
+    right: 48%;
   }
+  
+  .aboutPage .hero .card h1 .microphone-alt {
+  width: 6rem;
+  top: 2.4rem;
+}
 
   .aboutPage .hero .card p {
-    max-width: 55rem;
     font-size: 1.5rem;
     line-height: 3rem;
-    margin-bottom: 2.4rem;
+    margin: 3rem 6rem 1.2rem;
   }
 
   .aboutPage .hero .card p .dial {
-    width: 18rem;
-    top: -10rem;
-    right: -10rem;
+    width: 14rem;
+    top: 0;
+    left: -8.5rem;
+    transform: translateZ(-10px) rotate(-90deg);
   }
+
+  .aboutPage .hero .card p .record-vinyl {
+  width: 8rem;
+  top: -4.2rem;
+  right: -4.2rem;
+  fill: #d3d3d3;
+}
 
   .aboutPage .hero .card .dates {
     font-size: 3rem;
@@ -1274,15 +1392,91 @@ footer .container {
   .aboutPage .hero .card h5 {
     font-size: 1.6rem;
   }
+
+  .aboutPage .hero .headset {
+    width: 6rem;
+    transform: translateZ(-10px) rotate(45deg);
+    z-index: auto;
+    top: 4.2rem;
+  }
+
+  .aboutPage .hero .checkers {
+    width: 14rem;
+    -webkit-clip-path: circle(20px);
+    clip-path: circle(20px);
+    left: 4.8rem;
+    top: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .aboutPage .logo {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
+
+  .aboutPage .logo h5 {
+    font-size: 1.5rem;
+  }
+
+  .aboutPage .logo .container .logoBox {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 2.4rem;
+    border: 2px solid #d3d3d3;
+    justify-content: center;
+    padding: 3rem;
+    width: 50%;
+    margin: 2.4rem auto;
+  }
+
+  .aboutPage .logo .container .concertBox1,
+  .aboutPage .logo .container .concertBox2 {
+    font-size: 1.4rem;
+    width: 48%;
+    display: flex;
+  }
+
+  .aboutPage .logo .container .concertBox1:hover,
+  .aboutPage .logo .container .concertBox2:hover {
+    border-radius: 30px;
+  }
+
+   .aboutPage .logo .past {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  .aboutPage .logo .past h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+
+  
+
+  .aboutPage .logo .past h5 {
+    width: 100%;
+  }
+
+  .aboutPage .logo .past h6 {
+    text-align: center;
+    margin: 0;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
+  .aboutPage .logo .container .sectionHeading::after {
+    content: "";
+    height: 0.6rem;
+    width: 6rem;
+    border-bottom: 1px solid #ec5242;
+  }
+
   .aboutPage .partners {
     display: none;
   }
@@ -1315,19 +1509,28 @@ footer .container {
   .homePage .hero {
     grid-template-columns: [full-start] minmax(2.4rem, 10vw) [center-start] 1fr [center-end] minmax(2.4rem, 10vw) [full-end];
   }
-}
 
-@media screen and (min-width: 768px) {
+  .homePage .hero .card h1 { 
+    transform-style: preserve-3d;
+    z-index: 3;
+  }
+
+  .homePage .hero .card p { 
+    transform-style: preserve-3d;
+    z-index: 3;
+  }
+  
   .homePage .hero .checkers {
     width: 10.5rem;
     -webkit-clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
     clip-path: inset(2.1rem 3.15rem 1.75rem 0.7rem);
-    transform: rotate(45deg);
+    transform: translateZ(-10px) rotate(45deg);
     top: auto;
     bottom: 20rem;
     left: auto;
     right: 20vw;
     position: absolute;
+    z-index: 0;
   }
 
   .homePage .hero .wave-square-1 {
@@ -1335,6 +1538,7 @@ footer .container {
     position: absolute;
     right: 4.8vw;
     top: 30rem;
+    transform: translateZ(-10px)
   }
 
   .homePage .hero .wave-square-2 {
@@ -1343,24 +1547,28 @@ footer .container {
     bottom: 20rem;
     width: 4rem;
     fill: #d3d3d3;
+    transform: translateZ(-10px)
   }
 
   .homePage .hero .music-alt {
     position: absolute;
     top: 15rem;
-    right: 18vw;
+    right: 15vw;
     bottom: auto;
     fill: #d3d3d3;
     width: 5rem;
+    transform: translateZ(-10px);
+    z-index: 0;
   }
 
   .homePage .hero .headset {
     position: absolute;
-    top: 4rem;
+    top: 2.4rem;
     left: auto;
     right: 40%;
     width: 5rem;
-    transform: rotate(45deg);
+    transform: translateZ(-10px) rotate(45deg);
+    z-index: 0;
   }
 }
 
@@ -1462,6 +1670,11 @@ footer .container {
   .homePage .featured .cards .card {
     max-width: 48%;
   }
+
+  .homePage .featured .cards .hide {
+    display: flex;
+  }
+  
 }
 
 @media screen and (min-width: 768px) {
