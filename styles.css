@@ -1010,6 +1010,7 @@ footer .container {
   align-items: center;
   height: -moz-fit-content;
   height: fit-content;
+  justify-content: space-around;
 }
 
 .homePage .featured .cards .hide {
@@ -1019,7 +1020,7 @@ footer .container {
 .homePage .featured .cards .card .portrait {
   position: relative;
   padding: 1.2rem 0 0 1.2rem;
-  width: 30%;
+  flex: 1;
 }
 
 .homePage .featured .cards .card .portrait .checkers {
@@ -1034,6 +1035,9 @@ footer .container {
 
 .homePage .featured .cards .card .portrait img {
   width: 100%;
+  max-width: 9rem;
+  height: 9rem;
+  object-fit: cover;
   position: relative;
 }
 
@@ -1043,6 +1047,7 @@ footer .container {
   flex-direction: column;
   gap: 0.6rem;
   position: relative;
+  flex: 3;
 }
 
 .homePage .featured .cards .card .profile h3 {
@@ -1674,6 +1679,14 @@ footer .container {
   .homePage .featured .cards .card .portrait {
     width: 25%;
   }
+
+  .homePage .featured .cards .card .portrait img {
+    width: 100%;
+  max-width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  position: relative;
+}
 }
 
 @media screen and (min-width: 768px) {
