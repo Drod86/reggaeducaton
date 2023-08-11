@@ -2,7 +2,11 @@
 const grab = (selector) => document.querySelector(selector);
 const render = (node, markup) => { node.innerHTML = markup; };
 const listen = (node, event, callback) => node.addEventListener(event, callback);
+const listenAll = (nodes, event, callback) => nodes.forEach((node) => {
+  listen(node, event, callback);
+});
 const onClick = (node, callback) => listen(node, 'click', callback);
+const onClickAll = (node, callback) => listenAll(node, 'click', callback);
 
 // Fake Database
 const artistData = (fullName, songs, blurb, imgUrl) => ({
@@ -57,7 +61,7 @@ const featuredArtists = artists.reduce((acc, artist, i) => acc + artistCard(arti
 render(featuredCards, featuredArtists);
 
 // Show only 2 artists in mobile
-const artistCards = Object.values(grab('.cards').children);
+const artistCards = Object.values(featuredCards.children);
 const visibleCards = [0, 1];
 const renderMobileCards = () => {
   artistCards.forEach((card, i) => {
@@ -85,6 +89,9 @@ onClick(moreArtists, renderMobileCards);
 
 // Toggle mobile menu
 const menuBurger = grab('.menu-burger');
+const logo = grab('.logoBox');
+const mainNavItems = Object.values(grab('.main').children);
+const getTicket = grab('.getTicket');
 const header = grab('header');
 const toggleMenu = () => {
   const { className } = header;
@@ -94,13 +101,13 @@ const toggleMenu = () => {
     header.className = 'header';
   }
 };
-onClick(menuBurger, toggleMenu);
+
+onClickAll([...mainNavItems, menuBurger, logo, getTicket], toggleMenu);
 
 // Page routing
 const router = () => {
   window.addEventListener('popstate', () => {
     const page = grab('#page');
-    const mainNavItems = Object.values(grab('.main').children);
     const pageName = window.location.hash.substring(1);
     if (pageName.includes('home') || pageName.includes('about')) page.className = `${pageName}Page`;
     mainNavItems.forEach((item) => {
